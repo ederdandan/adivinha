@@ -94,6 +94,10 @@ label.btn{display:inline-flex;align-items:center;gap:6px}
 .qtext{font-size:1.5rem;font-weight:800;margin:8px 0}
 .ansrow{display:grid;grid-template-columns:1fr 1fr 1fr;gap:8px;margin-top:12px}
 .ansrow .btn{min-height:56px;font-size:1.05rem}
+.ansrow.two{grid-template-columns:1fr 1fr}
+.checks{display:flex;flex-direction:column;gap:4px;margin-top:6px}
+.checks label{display:flex;align-items:center;gap:10px;min-height:44px;font-weight:700;cursor:pointer}
+.checks input{width:22px;height:22px;min-height:0;accent-color:var(--accent)}
 .wait{display:flex;align-items:center;gap:10px}
 .dots{width:22px;height:22px;border-radius:50%;border:3px solid var(--line);border-top-color:var(--accent);animation:spin 1s linear infinite;flex:none}
 @keyframes spin{to{transform:rotate(360deg)}}
@@ -205,14 +209,44 @@ function aliveLimit(){ return S.players.length>=3 ? 2 : 1; }
 function startGame(picks){
   S.players.forEach((p,i)=>{
     const it=picks[i%picks.length];
-    Object.assign(p,{item:{n:it.n,h:it.h,a:it.a||[]},cat:it.cat,hintTotal:it.h.length,alive:true,score:0,hintsUsed:0,hints:[],foundBy:null});
+    Object.assign(p,{item:{n:it.n,h:it.h,a:it.a||[]},cat:it.cat,alive:true,score:0,hintsUsed:0,hints:[],autoUsed:0,foundBy:null});
   });
   S.phase='playing'; S.pending=null; S.log=[]; S.round++;
   S.turn=Math.floor(Math.random()*S.players.length);
   if(!S.players[S.turn].online) nextTurn();
   addLog({k:'sys',text:'A partida começou! Cada um recebeu um item secreto. '+S.players[S.turn].name+' começa.'});
 }
-function revealHint(p){ if(!p.item||p.hints.length>=p.item.h.length) return null; const h=p.item.h[p.hints.length]; p.hints.push(h); return h; }
+/* Próxima dica pronta do item (as dicas escritas pelos jogadores não gastam as prontas). */
+function nextAutoHint(p){ return (p.item&&(p.autoUsed||0)<p.item.h.length) ? p.item.h[p.autoUsed||0] : null; }
+function revealHint(p){ const h=nextAutoHint(p); if(!h) return null; p.autoUsed=(p.autoUsed||0)+1; p.hints.push(h); return h; }
+/* Palpite aceito sem perguntar ao dono: igual ao nome ou apelido, sem plural, sem espaços e
+   com 1 letra trocada (nomes de 8+ letras) ou 2 (nomes de 12+ letras). */
+function lev(a,b){
+  let prev=Array.from({length:b.length+1},(_,j)=>j);
+  for(let i=1;i<=a.length;i++){ const cur=[i]; for(let j=1;j<=b.length;j++) cur[j]=Math.min(prev[j]+1,cur[j-1]+1,prev[j-1]+(a[i-1]===b[j-1]?0:1)); prev=cur; }
+  return prev[b.length];
+}
+function guessKey(s){ return norm(s).split(' ').map(w=>w.length>3?w.replace(/s$/,''):w).join(''); }
+function guessMatches(g,names){
+  const a=guessKey(g); if(!a) return false;
+  return names.some(n=>{ const b=guessKey(n); if(!b) return false; const tol=b.length>=12?2:b.length>=8?1:0; return a===b||lev(a,b)<=tol; });
+}
+/* A dica não pode entregar o nome do item. */
+function hintGivesAway(text,item){ const t=' '+norm(text)+' '; return [item.n].concat(item.a||[]).some(x=>{ const k=norm(x); return k&&t.includes(' '+k+' '); }); }
+function findItem(pid,t,ok,e){
+  if(ok){
+    t.alive=false; t.foundBy=pid; P(pid).score++;
+    e.ok=true; e.item=t.item.n;
+    if(!checkEnd()) nextTurn();
+    return;
+  }
+  e.ok=false;
+  const me=P(pid);
+  if(me.alive){   // Dica Forçada: quem errou dá uma dica sobre o próprio item
+    const f=addLog({k:'forced',from:pid,to:pid,text:null});
+    S.pending={kind:'forced',from:pid,to:pid,logId:f.id};
+  } else nextTurn();
+}
 function nextTurn(){ const n=S.players.length; let i=S.turn; for(let k=0;k<n;k++){ i=(i+1)%n; if(S.players[i].online) break; } S.turn=i; }
 function checkEnd(){
   const alive=S.players.filter(p=>p.alive).length;
@@ -242,41 +276,66 @@ function act(pid,m){
                   startGame(m.picks); return null;
     case 'lobby': if(host){ S.phase='lobby'; S.pending=null; S.players=S.players.filter(p=>p.online||p.pid===S.hostPid); } return null;
     case 'skip':  if(!host||S.phase!=='playing') return null;
-                  if(S.pending){ const e=S.log.find(x=>x.id===S.pending.logId); if(e) e.ans='skip'; S.pending=null; }
-                  addLog({k:'sys',text:'A vez de '+S.players[S.turn].name+' foi pulada.'});
+                  if(S.pending){
+                    // Quem travou foi quem devia responder: resolve o pedido do jeito mais neutro.
+                    const pd=S.pending, e=S.log.find(x=>x.id===pd.logId), owner=P(pd.to); S.pending=null;
+                    addLog({k:'sys',text:owner.name+' não respondeu a tempo.'});
+                    if(e&&pd.kind==='guess') e.ok='skip';
+                    else if(e&&(pd.kind==='hint'||pd.kind==='forced')){ e.text=revealHint(owner)||''; e.auto=true; }
+                    else if(e) e.ans='skip';
+                  } else addLog({k:'sys',text:'A vez de '+S.players[S.turn].name+' foi pulada.'});
                   nextTurn(); return null;
   }
   if(S.phase!=='playing') return 'A partida não está em andamento.';
+  const pd=S.pending;
   if(m.a==='answer'){
-    if(!S.pending||S.pending.to!==pid) return 'Não há pergunta para você responder.';
+    if(!pd||(pd.kind||'q')!=='q'||pd.to!==pid) return 'Não há pergunta para você responder.';
     if(!['sim','nao','naosei'].includes(m.ans)) return 'Resposta inválida.';
-    const e=S.log.find(x=>x.id===S.pending.logId); if(e) e.ans=m.ans;
+    const e=S.log.find(x=>x.id===pd.logId); if(e) e.ans=m.ans;
     S.pending=null; nextTurn(); return null;
   }
+  if(m.a==='givehint'){
+    if(!pd||(pd.kind!=='hint'&&pd.kind!=='forced')||pd.to!==pid) return 'Ninguém pediu dica para você agora.';
+    const e=S.log.find(x=>x.id===pd.logId);
+    let text;
+    if(m.auto){ text=revealHint(me); if(!text) return 'Acabaram as dicas prontas. Escreva uma dica.'; }
+    else{
+      text=String(m.text||'').trim().slice(0,120);
+      if(text.length<3) return 'Escreva uma dica.';
+      if(hintGivesAway(text,me.item)) return 'A dica não pode ter o nome do item!';
+      me.hints.push(text);
+    }
+    if(e){ e.text=text; e.auto=!!m.auto; }
+    S.pending=null; nextTurn(); return null;
+  }
+  if(m.a==='judge'){
+    if(!pd||pd.kind!=='guess'||pd.to!==pid) return 'Não há palpite para você conferir.';
+    const e=S.log.find(x=>x.id===pd.logId); S.pending=null;
+    if(e) e.judged=true;
+    findItem(pd.from,me,!!m.ok,e||{}); return null;
+  }
   if(S.players[S.turn].pid!==pid) return 'Não é a sua vez.';
-  if(S.pending) return 'Aguarde a resposta da pergunta.';
+  if(pd) return 'Aguarde a resposta de '+P(pd.to).name+'.';
   const t=P(m.to);
   if(!t||t.pid===pid||!t.alive) return 'Escolha um oponente que ainda está em jogo.';
   if(m.a==='ask'){
     const text=String(m.text||'').trim().slice(0,140); if(!text) return 'Escolha ou escreva uma pergunta.';
     const e=addLog({k:'q',from:pid,to:t.pid,text,ans:null});
-    S.pending={from:pid,to:t.pid,logId:e.id}; return null;
+    S.pending={kind:'q',from:pid,to:t.pid,logId:e.id}; return null;
   }
   if(m.a==='hint'){
+    // O dono do item escreve a dica (ou escolhe uma pronta).
     if(me.hintsUsed>=MAX_HINTS) return 'Você já usou suas '+MAX_HINTS+' dicas.';
-    const h=revealHint(t); if(!h) return 'Não há mais dicas sobre o item de '+t.name+'.';
-    me.hintsUsed++; addLog({k:'hint',from:pid,to:t.pid,text:h}); nextTurn(); return null;
+    me.hintsUsed++;
+    const e=addLog({k:'hint',from:pid,to:t.pid,text:null});
+    S.pending={kind:'hint',from:pid,to:t.pid,logId:e.id}; return null;
   }
   if(m.a==='guess'){
     const g=String(m.text||'').trim().slice(0,60); if(!g) return 'Escreva seu palpite.';
-    if([t.item.n].concat(t.item.a||[]).some(x=>norm(x)===norm(g))){
-      t.alive=false; t.foundBy=pid; me.score++;
-      addLog({k:'guess',from:pid,to:t.pid,text:g,ok:true,item:t.item.n});
-      if(!checkEnd()) nextTurn(); return null;
-    }
-    const e=addLog({k:'guess',from:pid,to:t.pid,text:g,ok:false});
-    if(me.alive){ e.penalty = revealHint(me) || ''; }   // Custo de Dica Forçada
-    nextTurn(); return null;
+    const e=addLog({k:'guess',from:pid,to:t.pid,text:g,ok:null});
+    if(guessMatches(g,[t.item.n].concat(t.item.a||[]))){ findItem(pid,t,true,e); return null; }
+    // Não bateu com o nome: o dono confere se valeu (escrita diferente, sinônimo…).
+    S.pending={kind:'guess',from:pid,to:t.pid,logId:e.id}; return null;
   }
   return 'Ação desconhecida.';
 }
@@ -306,6 +365,78 @@ function genCode(){ const L='ABCDEFGHJKLMNPQRSTUVWXYZ'; let c=''; for(let i=0;i<
 let toastTimer;
 function toast(msg){ const t=$('#toast'); t.textContent=msg; t.classList.add('show'); clearTimeout(toastTimer); toastTimer=setTimeout(()=>t.classList.remove('show'),3200); }
 
+/* ------------------------------- avisos ------------------------------- */
+/* Sons gerados na hora (Web Audio, sem arquivos) e vibração. Cada aparelho escolhe o que quer receber. */
+const AVISO_MODOS = {som:'🔊 Som', vibrar:'📳 Vibrar', ambos:'🔊📳 Som e vibrar', mudo:'🔇 Silêncio'};
+const AVISO_TIPOS = {resp:'Respostas (Sim, Não, Não sei)', vez:'Sua vez e pedidos para você', jogo:'Acertos, erros e dicas'};
+let avisos = Object.assign({modo:'som',resp:true,vez:true,jogo:true}, store.get('adv-avisos')||{});
+const SONS = {   // [frequência Hz, duração s] tocadas em sequência; tipo da onda; padrão de vibração (ms)
+  sim:   {t:'resp', w:'sine',     n:[[660,.12],[880,.18]],                 v:[60]},
+  nao:   {t:'resp', w:'triangle', n:[[330,.14],[247,.22]],                 v:[60,60,60]},
+  naosei:{t:'resp', w:'sine',     n:[[523,.1],[494,.1],[523,.16]],         v:[30,40,30]},
+  vez:   {t:'vez',  w:'sine',     n:[[784,.12],[1047,.22]],                v:[120,80,120]},
+  pedido:{t:'vez',  w:'sine',     n:[[988,.08],[988,.08],[1319,.18]],      v:[200]},
+  acerto:{t:'jogo', w:'square',   n:[[523,.1],[659,.1],[784,.1],[1047,.3]],v:[80,50,80,50,200]},
+  erro:  {t:'jogo', w:'sawtooth', n:[[220,.18],[175,.3]],                  v:[300]},
+  dica:  {t:'jogo', w:'sine',     n:[[1319,.06],[1568,.06],[2093,.14]],    v:[40]}
+};
+let audioCtx=null, audioAt=0;
+function unlockAudio(){
+  try{ if(!audioCtx){ const C=window.AudioContext||window.webkitAudioContext; if(C) audioCtx=new C(); } if(audioCtx&&audioCtx.state==='suspended') audioCtx.resume(); }catch(e){}
+}
+// O navegador só libera o som depois de um toque na tela.
+document.addEventListener('pointerdown',unlockAudio,{passive:true});
+document.addEventListener('keydown',unlockAudio);
+function aviso(nome,force){
+  const s=SONS[nome]; if(!s) return;
+  if(!force&&(avisos.modo==='mudo'||!avisos[s.t])) return;
+  if(avisos.modo==='vibrar'||avisos.modo==='ambos'){ try{ if(navigator.vibrate) navigator.vibrate(s.v); }catch(e){} }
+  if(avisos.modo==='vibrar'||avisos.modo==='mudo'||!audioCtx) return;
+  try{
+    let t=Math.max(audioCtx.currentTime+.02,audioAt);
+    for(const [f,d] of s.n){
+      const o=audioCtx.createOscillator(), g=audioCtx.createGain();
+      o.type=s.w; o.frequency.value=f; o.connect(g); g.connect(audioCtx.destination);
+      const vol=s.w==='sine'?.25:.12;
+      g.gain.setValueAtTime(0,t); g.gain.linearRampToValueAtTime(vol,t+.01); g.gain.exponentialRampToValueAtTime(.0001,t+d);
+      o.start(t); o.stop(t+d+.02); t+=d*.9;
+    }
+    audioAt=t+.08;
+  }catch(e){}
+}
+function feedbackTest(){ ['sim','vez','acerto'].forEach(n=>aviso(n,true)); if(avisos.modo==='mudo') toast('Modo silêncio: nada vai tocar nem vibrar.'); }
+/* Compara o que a tela mostrava com o novo estado e toca os avisos do que mudou. */
+let fbMemo=null;
+function memoOf(v){
+  const log={}; for(const e of v.log||[]) log[e.id]={ans:e.ans,ok:e.ok,text:e.text};
+  const cur=v.players&&v.players[v.turn];
+  return {log, maxId:(v.log&&v.log.length)?v.log[v.log.length-1].id:0,
+    mine:v.phase==='playing'&&!v.pending&&!!cur&&cur.pid===v.me,
+    pend:v.pending&&v.pending.to===v.me&&v.pending.kind!=='forced'?v.pending.logId:null};
+}
+function feedback(v){
+  if(!v) return;
+  const m=memoOf(v), old=fbMemo; fbMemo=m;
+  if(!old) return;   // primeira tela (entrou ou reconectou): sem barulho
+  for(const e of v.log||[]){
+    const p=old.log[e.id]; if(!p&&e.id<=old.maxId) continue;
+    const was=p||{};
+    if(e.k==='q'&&e.ans&&e.ans!=='skip'&&!was.ans) aviso(e.ans);
+    if(e.k==='guess'&&(e.ok===true||e.ok===false)&&was.ok!==e.ok) aviso(e.ok?'acerto':'erro');
+    if((e.k==='hint'||e.k==='forced')&&e.text&&!was.text) aviso('dica');
+  }
+  if(m.pend&&m.pend!==old.pend) aviso('pedido');
+  else if(m.mine&&!old.mine) aviso('vez');
+}
+function avisosHtml(){
+  return `<section class="card"><div class="between"><h2 style="margin:0">Avisos deste celular</h2><button class="btn sm ghost" data-do="avisos">Fechar</button></div>
+    <div class="chips" style="margin-top:12px">${Object.entries(AVISO_MODOS).map(([k,l])=>`<button class="chip ${avisos.modo===k?'on':''}" style="--pc:var(--accent)" data-modo="${k}">${l}</button>`).join('')}</div>
+    <div class="eyebrow">Avisar quando</div>
+    <div class="checks">${Object.entries(AVISO_TIPOS).map(([k,l])=>`<label><input type="checkbox" data-aviso="${k}" ${avisos[k]?'checked':''}> ${l}</label>`).join('')}</div>
+    <button class="btn sm" style="margin-top:10px" data-do="testsom">▶️ Testar</button>
+    ${'vibrate' in navigator?'':'<p class="note">Este celular não permite vibrar pelo navegador (no iPhone só o som funciona).</p>'}</section>`;
+}
+
 /* ------------------------------- estado ------------------------------- */
 let myPid = store.get('adv-pid'); if(!myPid){ myPid=uid(); store.set('adv-pid',myPid); }
 let myName = store.get('adv-name') || '';
@@ -317,7 +448,7 @@ let isHost=false, peer=null, hostConn=null;
 const conns=new Map();     // peerId -> {conn,pid}
 let S=null;                // estado completo (só no anfitrião)
 let V=null;                // o que esta tela mostra
-const ui={tab:'ask',target:null,peek:false,connMsg:'',err:'',sugSeed:Math.floor(Math.random()*1e6)};
+const ui={tab:'ask',target:null,peek:false,avisos:false,connMsg:'',err:'',sugSeed:Math.floor(Math.random()*1e6)};
 
 function shareUrl(){ return location.origin+location.pathname+'?sala='+roomCode; }
 function setUrl(code){ try{ history.replaceState(null,'',location.pathname+(code?'?sala='+code:'')); }catch(e){} }
@@ -424,7 +555,7 @@ function sync(){
       e.conn.send({t:'state',v:viewFor(e.pid)});
     }catch(err){}
   }
-  V=viewFor(myPid); render();
+  V=viewFor(myPid); feedback(V); render();
 }
 
 function joinRoom(code){
@@ -452,7 +583,7 @@ function connectHost(code){
     if(!m||hostConn!==c) return;
     lastSeen=Date.now();
     if(m.t==='photos'){ PHOTOS=m.map||{}; if(V) render(); }
-    else if(m.t==='state'){ V=m.v; mode='room'; ui.err=''; joinFails=0; tabRoom.set(code); render(); }
+    else if(m.t==='state'){ V=m.v; feedback(V); mode='room'; ui.err=''; joinFails=0; tabRoom.set(code); render(); }
     else if(m.t==='toast'){ if(m.fatal) failHome(m.msg); else toast(m.msg); }
   });
   c.on('close',()=>{ if(hostConn===c) connAt=0; });
@@ -491,7 +622,7 @@ function send(m){
 }
 function teardown(){
   try{ if(peer) peer.destroy(); }catch(e){}
-  peer=null; hostConn=null; conns.clear(); V=null; linkOk=true; tabRoom.set('');
+  peer=null; hostConn=null; conns.clear(); V=null; linkOk=true; tabRoom.set(''); fbMemo=null;
 }
 function failHome(msg){ teardown(); if(isHost){ S=null; } isHost=false; mode='home'; ui.err=msg||''; render(); }
 function leaveRoom(){
@@ -506,9 +637,10 @@ function rulesHtml(){
   <li>Cada jogador recebe um <b>item secreto</b>. Antes de entrar, você pode colocar uma <b>foto de perfil</b>. A categoria de cada item fica visível para todos.</li>
   <li>Na sua vez, escolha <b>uma</b> ação:
     <br>❓ <b>Perguntar</b> a um oponente (Sim, Não ou Não sei). Quem responde é o dono do item.
-    <br>💡 <b>Usar dica</b>: revela uma dica sobre o item de um oponente (cada jogador pode usar ${MAX_HINTS}). Cada item tem 4 dicas, da mais vaga para a mais reveladora.
-    <br>🎯 <b>Palpite</b>: tenta adivinhar o item de um oponente.</li>
-  <li>Palpite errado? Você sofre a <b>Dica Forçada</b>: uma dica sobre o <i>seu</i> item é revelada para todos.</li>
+    <br>💡 <b>Pedir dica</b>: o dono do item escreve uma dica para todos verem, ou usa uma dica pronta (cada jogador pode pedir ${MAX_HINTS}).
+    <br>🎯 <b>Palpite</b>: tenta adivinhar o item de um oponente. Pequenos erros de digitação valem; se a escrita for diferente, o dono do item confere se acertou.</li>
+  <li>Palpite errado? Você sofre a <b>Dica Forçada</b>: tem que dar uma dica sobre o <i>seu</i> item para todos.</li>
+  <li>Toque no 🔊 lá em cima para escolher som, vibração ou silêncio.</li>
   <li>Acertou? Ganha <b>1 ponto</b>. Quem foi descoberto vira <b>Espectador Ativo</b> e continua jogando.</li>
   <li>O jogo termina quando restam <b>2 itens</b> sem descobrir. Vence quem tiver mais pontos.</li>
   <li>Todas as perguntas e respostas ficam no <b>histórico</b> para todo mundo deduzir junto.</li>
@@ -584,20 +716,19 @@ function renderActions(me){
       <button class="btn primary big" data-do="ask">Perguntar para ${esc(t.name)}</button></div>`;
   } else if(ui.tab==='hint'){
     if(left<=0) body=`<p class="muted">Você já usou suas ${MAX_HINTS} dicas.</p>`;
-    else if(t.hints.length>=(t.hintTotal||4)) body=`<p class="muted">Todas as dicas sobre o item de ${esc(t.name)} já foram reveladas. Escolha outro oponente.</p>`;
-    else body=`<p class="note">Revela uma dica sobre o item de <b>${esc(t.name)}</b> para todos. Você ainda pode usar <b>${left}</b> dica${left>1?'s':''}.</p>
-      <button class="btn primary big" data-do="hint">💡 Revelar dica</button>`;
+    else body=`<p class="note"><b>${esc(t.name)}</b> vai dar uma dica sobre o próprio item, e todos vão ver. Você ainda pode pedir <b>${left}</b> dica${left>1?'s':''}.</p>
+      <button class="btn primary big" data-do="hint">💡 Pedir dica para ${esc(t.name)}</button>`;
   } else {
     const opts='';
     body=`<div class="stack">
       <input id="guess" data-keep="guess" list="itemlist" maxlength="60" placeholder="O item de ${esc(t.name)} é…" data-enter="guess"><datalist id="itemlist">${opts}</datalist>
       <button class="btn primary big" data-do="guess">🎯 Arriscar palpite</button>
-      ${me.alive?'<p class="note">Atenção: se errar, uma dica sobre o <b>seu</b> item será revelada para todos.</p>':''}</div>`;
+      ${me.alive?'<p class="note">Atenção: se errar, você terá que dar uma dica sobre o <b>seu</b> item para todos.</p>':''}</div>`;
   }
   return `<section class="card answer"><h2>Sua vez! Escolha uma ação</h2>
     <div class="tabs" role="tablist">
       <button class="${ui.tab==='ask'?'on':''}" data-tab="ask">❓ Perguntar</button>
-      <button class="${ui.tab==='hint'?'on':''}" data-tab="hint">💡 Dica (${left})</button>
+      <button class="${ui.tab==='hint'?'on':''}" data-tab="hint">💡 Dica <small>· restam ${left}</small></button>
       <button class="${ui.tab==='guess'?'on':''}" data-tab="guess">🎯 Palpite</button>
     </div>
     <div class="eyebrow">Para quem?</div>
@@ -614,7 +745,7 @@ function playersHtml(){
       <div class="pstatus">${p.alive
         ? (over?`Era: <b>${esc(p.item.n)}</b> (não descoberto)`:(p.pid===V.me?'Seu item ainda é segredo 🤫':'Item secreto 🔒'))
         : `Descoberto: <b>${esc(p.item.n)}</b>${p.foundBy?' por '+esc(nameOf(p.foundBy)):''}${over?'':' <span class="tag spec">Espectador Ativo</span>'}`}</div>
-      ${p.hints.length?`<ul class="hints">${p.hints.map(h=>`<li>💡 ${esc(h)}</li>`).join('')}</ul>`:''}
+      ${p.hints.length?`<div class="eyebrow" style="margin-top:8px">Dicas sobre este item (${p.hints.length})</div><ul class="hints">${p.hints.map(h=>`<li>💡 ${esc(h)}</li>`).join('')}</ul>`:''}
     </article>`).join('')}</div></section>`;
 }
 const ANS={sim:'Sim',nao:'Não',naosei:'Não sei',skip:'Sem resposta'};
@@ -623,28 +754,56 @@ function logLine(e){
   switch(e.k){
     case 'sys':  return `<li class="sys">${esc(e.text)}</li>`;
     case 'q':    return `<li>❓ ${n(e.from)} → ${n(e.to)}: “${esc(e.text)}” ${e.ans?`<span class="badge ${e.ans}">${ANS[e.ans]}</span>`:'<span class="badge wait">aguardando…</span>'}</li>`;
-    case 'hint': return `<li>💡 ${n(e.from)} usou uma dica sobre o item de ${n(e.to)}: <i>${esc(e.text)}</i></li>`;
+    // O texto das dicas fica só no cartão do jogador, para não aparecer repetido.
+    case 'hint':
+      if(e.text==null) return `<li>💡 ${n(e.from)} pediu uma dica para ${n(e.to)} <span class="badge wait">aguardando…</span></li>`;
+      return `<li>💡 ${n(e.to)} deu ${e.auto?'uma dica pronta':'uma dica ✍️'} para ${n(e.from)} (veja no cartão de ${n(e.to)}).${e.text===''?' Não havia mais dicas.':''}</li>`;
+    case 'forced':
+      if(e.text==null) return `<li>⚠️ Dica Forçada: ${n(e.from)} está escrevendo uma dica sobre o próprio item…</li>`;
+      return `<li>⚠️ Dica Forçada: ${n(e.from)} deu ${e.auto?'uma dica pronta':'uma dica ✍️'} sobre o próprio item.${e.text===''?' Não havia mais dicas.':''}</li>`;
     case 'guess':
-      if(e.ok) return `<li>🎯 ${n(e.from)} acertou! O item de ${n(e.to)} era <b>${esc(e.item)}</b>. +1 ponto</li>`;
-      return `<li>❌ ${n(e.from)} chutou “${esc(e.text)}” para ${n(e.to)} e errou.${e.penalty?` Dica forçada sobre o item de ${n(e.from)}: <i>${esc(e.penalty)}</i>`:(e.penalty===''?' (Não havia mais dicas para revelar.)':'')}</li>`;
+      if(e.ok===true) return `<li>🎯 ${n(e.from)} acertou! O item de ${n(e.to)} era <b>${esc(e.item)}</b>${e.judged?` (${n(e.to)} confirmou “${esc(e.text)}”)`:''}. +1 ponto</li>`;
+      if(e.ok===false) return `<li>❌ ${n(e.from)} chutou “${esc(e.text)}” para ${n(e.to)} e errou.</li>`;
+      if(e.ok==='skip') return `<li>🎯 ${n(e.from)} chutou “${esc(e.text)}” para ${n(e.to)}, mas ficou sem resposta.</li>`;
+      return `<li>🎯 ${n(e.from)} chutou “${esc(e.text)}” para ${n(e.to)} <span class="badge wait">conferindo…</span></li>`;
   }
   return '';
 }
 function historyHtml(){
   return `<section class="card"><h2>Histórico</h2><ul class="log">${V.log.slice().reverse().map(logLine).join('')}</ul></section>`;
 }
+/* Cartão para quem precisa responder algo: pergunta, pedido de dica, Dica Forçada ou conferir palpite. */
+function pendingCard(pend,me){
+  const e=V.log.find(x=>x.id===pend.logId)||{};
+  const from=esc(nameOf(pend.from)), item=`<b>${esc(me.item.n)}</b>`;
+  if(pend.kind==='guess') return `<section class="card answer"><div class="eyebrow">${from} deu um palpite sobre o seu item</div>
+      <div class="qtext">“${esc(e.text)}”</div>
+      <p class="note">Seu item é ${item}. O palpite está certo, mesmo escrito de outro jeito?</p>
+      <div class="ansrow two"><button class="btn yes" data-judge="1">Sim, acertou!</button><button class="btn no" data-judge="0">Não, errou</button></div></section>`;
+  if(pend.kind==='hint'||pend.kind==='forced'){
+    const auto=nextAutoHint(me);
+    return `<section class="card answer"><div class="eyebrow">${pend.kind==='forced'?'Você errou o palpite: Dica Forçada':from+' pediu uma dica'}</div>
+      <p style="margin:6px 0 10px">Escreva uma dica sobre o seu item (${item}). Todos vão ver. Não vale escrever o nome!</p>
+      <div class="stack"><input id="hinttext" data-keep="hinttext" maxlength="120" autocomplete="off" placeholder="Ex.: Tem na casa da vovó" data-enter="givehint">
+        <button class="btn primary big" data-do="givehint">✍️ Enviar minha dica</button>
+        ${auto?`<button class="btn" data-do="autohint">Usar a dica pronta: “${esc(auto)}”</button>`:'<p class="note">As dicas prontas deste item acabaram.</p>'}</div></section>`;
+  }
+  return `<section class="card answer"><div class="eyebrow">${from} perguntou para você</div>
+      <div class="qtext">“${esc(e.text)}”</div>
+      <p class="note">Lembrete: seu item é ${item}.</p>
+      <div class="ansrow"><button class="btn yes" data-ans="sim">Sim</button><button class="btn no" data-ans="nao">Não</button><button class="btn maybe" data-ans="naosei">Não sei</button></div></section>`;
+}
 function renderGame(){
   const me=pl(V.me); const cur=V.players[V.turn]; const host=V.hostPid===V.me;
   const myTurn=cur&&cur.pid===V.me; const pend=V.pending;
   let top='';
   if(pend&&pend.to===V.me){
-    const e=V.log.find(x=>x.id===pend.logId);
-    top=`<section class="card answer"><div class="eyebrow">${esc(nameOf(pend.from))} perguntou para você</div>
-      <div class="qtext">“${esc(e?e.text:'')}”</div>
-      <p class="note">Lembrete: seu item é <b>${esc(me.item.n)}</b>.</p>
-      <div class="ansrow"><button class="btn yes" data-ans="sim">Sim</button><button class="btn no" data-ans="nao">Não</button><button class="btn maybe" data-ans="naosei">Não sei</button></div></section>`;
+    top=pendingCard(pend,me);
   } else if(pend){
-    top=`<section class="card wait"><div class="dots"></div><div><b>${esc(nameOf(pend.to))}</b> está respondendo à pergunta de ${esc(nameOf(pend.from))}…</div></section>`;
+    const who=`<b>${esc(nameOf(pend.to))}</b>`, from=esc(nameOf(pend.from));
+    const what={hint:`está escrevendo uma dica para ${from}…`,forced:`errou o palpite e está escrevendo uma dica sobre o próprio item…`,
+      guess:`está conferindo o palpite de ${from}…`}[pend.kind]||`está respondendo à pergunta de ${from}…`;
+    top=`<section class="card wait"><div class="dots"></div><div>${who} ${what}</div></section>`;
   } else if(myTurn){
     top=renderActions(me);
   }
@@ -673,7 +832,7 @@ function renderTopbar(){
   const tb=$('#topbar');
   if(mode!=='room'||!V){ tb.hidden=true; return; }
   tb.hidden=false;
-  tb.innerHTML=`<div class="brand">❓ Adivinha o que é</div><div class="row">${!isHost&&!linkOk?'<span class="tag off">Reconectando…</span>':''}<span class="tag">Sala ${esc(V.code)}</span><button class="btn ghost sm" data-do="leave">Sair</button></div>`;
+  tb.innerHTML=`<div class="brand">❓ Adivinha o que é</div><div class="row">${!isHost&&!linkOk?'<span class="tag off">Reconectando…</span>':''}<span class="tag">Sala ${esc(V.code)}</span><button class="btn ghost sm" data-do="avisos" aria-label="Avisos" title="Avisos">${AVISO_MODOS[avisos.modo].split(' ')[0]}</button><button class="btn ghost sm" data-do="leave">Sair</button></div>`;
 }
 function render(){
   const saved={}; let focusKey=null, sel=null;
@@ -687,6 +846,7 @@ function render(){
   else if(V&&V.phase==='lobby') html=renderLobby();
   else if(V&&V.phase==='playing') html=renderGame();
   else if(V&&V.phase==='over') html=renderOver();
+  if(ui.avisos&&mode==='room') html=avisosHtml()+html;
   app.innerHTML=html;
   renderTopbar();
   document.querySelectorAll('[data-keep]').forEach(el=>{
@@ -771,15 +931,23 @@ function doAction(what){
     case 'skip': if(confirm('Pular a vez deste jogador?')) send({a:'skip'}); break;
     case 'ask': { const i=$('#qtext'); const text=(i.value||'').trim(); if(!text){ toast('Escolha ou escreva uma pergunta.'); return; } i.value=''; ui.sugSeed++; send({a:'ask',to:ui.target,text}); break; }
     case 'hint': send({a:'hint',to:ui.target}); break;
+    case 'givehint': { const i=$('#hinttext'); const text=(i&&i.value||'').trim(); if(text.length<3){ toast('Escreva uma dica.'); return; }
+                       if(V&&hintGivesAway(text,pl(V.me).item)){ toast('A dica não pode ter o nome do item!'); return; }
+                       i.value=''; send({a:'givehint',text}); break; }
+    case 'autohint': send({a:'givehint',auto:true}); break;
+    case 'avisos': ui.avisos=!ui.avisos; render(); break;
+    case 'testsom': unlockAudio(); feedbackTest(); break;
     case 'guess': { const i=$('#guess'); const text=(i.value||'').trim(); if(!text){ toast('Escreva seu palpite.'); return; } i.value=''; send({a:'guess',to:ui.target,text}); break; }
   }
 }
 document.addEventListener('click',e=>{
   const sg=e.target.closest('[data-sug]');
   if(sg){ const i=$('#qtext'); if(i){ i.value=sg.dataset.sug; i.focus(); } fillSugs(); return; }
-  const b=e.target.closest('[data-do],[data-ans],[data-target],[data-tab]'); if(!b||b.disabled) return;
+  const b=e.target.closest('[data-do],[data-ans],[data-judge],[data-modo],[data-target],[data-tab]'); if(!b||b.disabled) return;
   if(b.dataset.do) return doAction(b.dataset.do);
   if(b.dataset.ans) return send({a:'answer',ans:b.dataset.ans});
+  if(b.dataset.judge) return send({a:'judge',ok:b.dataset.judge==='1'});
+  if(b.dataset.modo){ avisos.modo=b.dataset.modo; store.set('adv-avisos',avisos); render(); return; }
   if(b.dataset.target){ ui.target=b.dataset.target; return render(); }
   if(b.dataset.tab){ ui.tab=b.dataset.tab; return render(); }
 });
@@ -787,6 +955,7 @@ document.addEventListener('change',e=>{
   const el=e.target;
   if(el.dataset.change==='cat') send({a:'cat',cat:el.value});
   if(el.dataset.change==='level') send({a:'level',level:el.value});
+  if(el.dataset.aviso){ avisos[el.dataset.aviso]=el.checked; store.set('adv-avisos',avisos); }
   if(el.matches('[data-photo]')){
     const f=el.files&&el.files[0]; el.value='';
     resizePhoto(f).then(d=>{ myPhoto=d; store.set('adv-photo',d); if(mode==='room') send({a:'photo',data:d}); render(); toast('Foto atualizada!'); })
