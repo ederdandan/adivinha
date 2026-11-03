@@ -295,6 +295,11 @@ const store = {
   set(k,v){ try{ localStorage.setItem(k,JSON.stringify(v)); }catch(e){} },
   del(k){ try{ localStorage.removeItem(k); }catch(e){} }
 };
+/* Sala em que esta aba está jogando: ao recarregar a página, o convidado entra de novo sozinho. */
+const tabRoom = {
+  get(){ try{ return sessionStorage.getItem('adv-sala')||''; }catch(e){ return ''; } },
+  set(v){ try{ if(v) sessionStorage.setItem('adv-sala',v); else sessionStorage.removeItem('adv-sala'); }catch(e){} }
+};
 function esc(s){ return String(s==null?'':s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c])); }
 function uid(){ return (window.crypto&&crypto.randomUUID) ? crypto.randomUUID() : Date.now().toString(36)+Math.random().toString(36).slice(2); }
 function genCode(){ const L='ABCDEFGHJKLMNPQRSTUVWXYZ'; let c=''; for(let i=0;i<4;i++) c+=L[Math.floor(Math.random()*L.length)]; return c; }
@@ -348,6 +353,8 @@ function hostRoom(code,restored){
   const open=()=>{
     peer=new Peer(PEER_PREFIX+code,{debug:0});
     peer.on('open',()=>{
+      // O PeerJS dispara 'open' de novo quando volta a falar com o servidor: a sala continua a mesma.
+      if(mode==='room') return;
       if(!restored){ S=newState(code,myPid,myName); if(myPhoto){ S.photos[myPid]=myPhoto; S.photoV=1; } }
       roomCode=code; setUrl(code); mode='room'; sync();
     });
@@ -357,19 +364,22 @@ function hostRoom(code,restored){
       conn.on('error',()=>onHostClose(conn));
     });
     peer.on('error',err=>{
-      if(err.type==='unavailable-id'){
+      // Com a sala já aberta, não derruba ninguém: tick() tenta voltar ao servidor sozinho.
+      if(mode==='room') return;
+      if(restored){
+        // O servidor ainda guarda o código da sala por um tempo depois que a página recarrega.
         peer.destroy();
-        if(restored){ if(tries++<8){ setTimeout(open,2500); } else failHome('Não foi possível recuperar a sala. Crie uma nova.'); }
-        else hostRoom(genCode(),false);
-      } else if(mode==='connecting'){ failHome('Não consegui criar a sala ('+err.type+'). Verifique a internet.'); }
-      else toast('Problema de conexão ('+err.type+').');
+        if(tries++<30) setTimeout(open,2500); else failHome('Não foi possível recuperar a sala. Crie uma nova.');
+      } else if(err.type==='unavailable-id'){ peer.destroy(); hostRoom(genCode(),false); }
+      else failHome('Não consegui criar a sala ('+err.type+'). Verifique a internet.');
     });
-    peer.on('disconnected',()=>{ try{ if(!peer.destroyed) peer.reconnect(); }catch(e){} });
   };
   open();
 }
 function onHostData(conn,m){
   if(!S||!m) return;
+  const e=conns.get(conn.peer); if(e&&e.conn===conn) e.seen=Date.now();
+  if(m.t==='ping') return;
   if(m.t==='join') return onJoin(conn,m);
   if(m.t==='act'){
     const entry=conns.get(conn.peer); if(!entry) return;
@@ -388,11 +398,13 @@ function onJoin(conn,m){
     p=mkPlayer(pid,name,freeColor()); S.players.push(p);
   }
   if(typeof m.photo==='string') act(pid,{a:'photo',data:m.photo});
-  conns.set(conn.peer,{conn,pid,pv:-1});
+  const old=conns.get(conn.peer);
+  conns.set(conn.peer,{conn,pid,pv:-1,seen:Date.now()});
+  if(old&&old.conn!==conn){ try{ old.conn.close(); }catch(e){} }
   sync();
 }
 function onHostClose(conn){
-  const entry=conns.get(conn.peer); if(!entry) return;
+  const entry=conns.get(conn.peer); if(!entry||entry.conn!==conn) return;
   conns.delete(conn.peer);
   const still=[...conns.values()].some(e=>e.pid===entry.pid);
   const p=P(entry.pid);
@@ -419,35 +431,59 @@ function joinRoom(code){
   if(peerMissing()) return;
   isHost=false; roomCode=code; mode='connecting'; ui.connMsg='Entrando na sala '+code+'…'; render();
   peer=new Peer({debug:0});
-  let retries=0;
-  peer.on('open',()=>connectHost(code));
+  joinFails=0; lastSeen=Date.now();
+  peer.on('open',()=>{ if(!hostConn) connectHost(code); });
   peer.on('error',err=>{
     if(err.type==='peer-unavailable'){
-      if(mode==='room'&&retries++<20){ toast('A sala está fora do ar. Tentando reconectar…'); setTimeout(()=>connectHost(code),3000); }
-      else failHome('Sala '+code+' não encontrada. Confira o link ou peça um novo para quem criou a sala.');
+      // Na primeira entrada é código errado; no meio da partida, o anfitrião só sumiu por um tempo.
+      if(!V) failHome('Sala '+code+' não encontrada. Confira o link ou peça um novo para quem criou a sala.');
+      else connAt=0;
     }
-    else if(mode==='connecting') failHome('Não consegui entrar ('+err.type+'). Verifique a internet.');
-    else toast('Problema de conexão ('+err.type+').');
+    else if(mode==='connecting'&&!peer.open) failHome('Não consegui entrar ('+err.type+'). Verifique a internet.');
   });
-  peer.on('disconnected',()=>{ try{ if(!peer.destroyed) peer.reconnect(); }catch(e){} });
 }
 function connectHost(code){
   if(!peer||peer.destroyed) return;
+  if(hostConn){ try{ hostConn.close(); }catch(e){} }
   const c=peer.connect(PEER_PREFIX+code,{reliable:true});
-  hostConn=c;
+  hostConn=c; connAt=Date.now();
   c.on('open',()=>c.send({t:'join',pid:myPid,name:myName,photo:myPhoto}));
   c.on('data',m=>{
-    if(!m) return;
+    if(!m||hostConn!==c) return;
+    lastSeen=Date.now();
     if(m.t==='photos'){ PHOTOS=m.map||{}; if(V) render(); }
-    else if(m.t==='state'){ V=m.v; mode='room'; ui.err=''; render(); }
+    else if(m.t==='state'){ V=m.v; mode='room'; ui.err=''; joinFails=0; tabRoom.set(code); render(); }
     else if(m.t==='toast'){ if(m.fatal) failHome(m.msg); else toast(m.msg); }
   });
-  c.on('close',()=>{
-    if(hostConn!==c||mode==='home') return;
-    toast('Conexão com a sala perdida. Tentando de novo…');
-    setTimeout(()=>{ if(hostConn===c) connectHost(code); },3000);
-  });
+  c.on('close',()=>{ if(hostConn===c) connAt=0; });
 }
+/* Relógio da conexão (a cada 2 s): sinal de vida, quedas silenciosas, conexões travadas e o servidor do PeerJS. */
+const PING_MS=2000, DEAD_MS=10000, CONNECT_MS=8000, GIVEUP_MS=180000;
+let connAt=0, lastSeen=0, joinFails=0, srvTry=0, linkOk=true;
+function tick(){
+  if(mode==='home'||!peer||peer.destroyed) return;
+  const now=Date.now();
+  // Perdeu o servidor de sinalização: as conexões abertas continuam; só tenta voltar de tempos em tempos.
+  if(peer.disconnected&&now-srvTry>3000){ srvTry=now; try{ peer.reconnect(); }catch(e){} }
+  if(isHost){
+    if(!S) return;
+    for(const e of [...conns.values()]){
+      if(!e.conn.open||now-e.seen>DEAD_MS){ try{ e.conn.close(); }catch(err){} onHostClose(e.conn); }
+      else{ try{ e.conn.send({t:'ping'}); }catch(err){} }
+    }
+    return;
+  }
+  const alive=!!(hostConn&&hostConn.open&&now-lastSeen<DEAD_MS);
+  if(alive!==linkOk){ linkOk=alive; renderTopbar(); }
+  if(hostConn&&hostConn.open){ try{ hostConn.send({t:'ping'}); }catch(e){} }
+  if(alive||(hostConn&&connAt&&now-connAt<CONNECT_MS)) return;
+  // Conexão caiu, travou ou nunca abriu: tenta de novo.
+  if(mode==='room'&&now-lastSeen>GIVEUP_MS) return failHome('A sala não responde há alguns minutos. Peça um novo link para quem criou a sala.');
+  if(!peer.open) return;
+  if(mode==='connecting'&&++joinFails>=3) return failHome('Não consegui falar com a sala. Tente colocar todos no mesmo Wi-Fi.');
+  connectHost(roomCode);
+}
+setInterval(tick,PING_MS);
 function send(m){
   if(isHost){ const err=act(myPid,m); if(err) toast(err); sync(); }
   else if(hostConn&&hostConn.open) hostConn.send(Object.assign({t:'act'},m));
@@ -455,7 +491,7 @@ function send(m){
 }
 function teardown(){
   try{ if(peer) peer.destroy(); }catch(e){}
-  peer=null; hostConn=null; conns.clear(); V=null;
+  peer=null; hostConn=null; conns.clear(); V=null; linkOk=true; tabRoom.set('');
 }
 function failHome(msg){ teardown(); if(isHost){ S=null; } isHost=false; mode='home'; ui.err=msg||''; render(); }
 function leaveRoom(){
@@ -637,7 +673,7 @@ function renderTopbar(){
   const tb=$('#topbar');
   if(mode!=='room'||!V){ tb.hidden=true; return; }
   tb.hidden=false;
-  tb.innerHTML=`<div class="brand">❓ Adivinha o que é</div><div class="row"><span class="tag">Sala ${esc(V.code)}</span><button class="btn ghost sm" data-do="leave">Sair</button></div>`;
+  tb.innerHTML=`<div class="brand">❓ Adivinha o que é</div><div class="row">${!isHost&&!linkOk?'<span class="tag off">Reconectando…</span>':''}<span class="tag">Sala ${esc(V.code)}</span><button class="btn ghost sm" data-do="leave">Sair</button></div>`;
 }
 function render(){
   const saved={}; let focusKey=null, sel=null;
@@ -773,6 +809,9 @@ document.addEventListener('keydown',e=>{
     // O anfitrião recarregou a página: recupera a partida.
     S=saved.S; S.photos=S.photos||{}; S.photoV=(S.photoV||0)+1; S.players.forEach(p=>{ p.online=(p.pid===myPid); });
     hostRoom(roomCode,true);
+  } else if(roomCode&&myName&&tabRoom.get()===roomCode){
+    // O convidado recarregou a página no meio da sala: entra de novo sem precisar tocar em nada.
+    joinRoom(roomCode);
   } else render();
 })();
 </script>
