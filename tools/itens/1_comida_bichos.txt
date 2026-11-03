@@ -1,0 +1,212 @@
+# Formato: Nome | nível (f=fácil, m=médio, d=difícil) | dica 1 | dica 2 | dica 3 | dica 4 | apelidos;separados;por;ponto-e-vírgula
+# As dicas vão da mais vaga para a mais reveladora. Nunca escreva o nome do item dentro da dica.
+
+# animais | Animais | 🐾 | vivo
+Cachorro | f | É um mamífero que vive com as pessoas. | Abana o rabo quando está feliz. | É chamado de melhor amigo do homem. | Late. | Cão;Cachorrinho
+Gato | f | É um mamífero pequeno e doméstico. | Tem bigodes e caça ratos. | Costuma cair de pé. | Mia e ronrona. | Gatinho
+Elefante | f | É o maior animal terrestre. | Tem orelhas enormes. | Tem presas de marfim. | Tem uma tromba.
+Girafa | f | Vive na savana africana. | Tem manchas marrons pelo corpo. | É o animal mais alto do mundo. | Tem o pescoço muito comprido.
+Leão | f | É um grande felino carnívoro. | Vive em bandos na savana africana. | O macho tem uma juba. | É chamado de rei da selva.
+Pinguim | f | É uma ave que não voa. | Nada muito bem e come peixe. | Vive em lugares gelados, como a Antártida. | É preto e branco e anda gingando.
+Tubarão | f | É um peixe grande. | É um dos maiores predadores do oceano. | Tem várias fileiras de dentes afiados. | Sua barbatana aparece fora d’água.
+Borboleta | f | É um inseto. | Pousa nas flores para beber néctar. | Antes de ser adulta, foi lagarta e casulo. | Tem asas grandes e coloridas.
+Cavalo | f | É um mamífero grande que come capim. | Já foi o principal meio de transporte. | Tem crina e usa ferradura. | Relincha e pode ser montado.
+Galinha | f | É uma ave de fazenda. | Quase não voa. | Cacareja e cisca o chão. | Bota os ovos que comemos.
+Macaco | f | É um mamífero muito esperto. | Vive em grupos nas florestas. | Pula de galho em galho usando os braços e a cauda. | É um primata parecido com o ser humano.
+Tartaruga | f | É um réptil. | Pode viver mais de 100 anos. | É famosa por ser muito lenta. | Carrega um casco nas costas. | Jabuti
+Vaca | f | É um mamífero grande de fazenda. | Rumina, mastigando o capim várias vezes. | Muge. | Dá o leite que a gente bebe.
+Porco | f | É um animal de fazenda. | Adora rolar na lama. | Tem focinho achatado e rabo enroladinho. | Faz “oinc”. | Porquinho
+Ovelha | f | É um mamífero de fazenda que anda em rebanho. | Bale. | É tosquiada uma vez por ano. | Dá a lã para fazer roupas. | Carneiro
+Coelho | f | É um mamífero pequeno e fofo. | Tem dentes da frente grandes. | Tem orelhas compridas e anda pulando. | É símbolo da Páscoa.
+Rato | f | É um roedor pequeno. | Vive escondido em buracos e esgotos. | Tem rabo comprido e fino. | Os gatos adoram caçá-lo. | Camundongo
+Cobra | f | É um réptil. | Troca de pele de tempos em tempos. | Algumas são venenosas. | Não tem patas e rasteja. | Serpente
+Jacaré | f | É um réptil grande. | Vive em rios e no Pantanal. | Fica parado na água com só os olhos de fora. | Tem a boca cheia de dentes e couro duro.
+Sapo | f | É um anfíbio. | Começa a vida como girino. | Pula e coaxa. | Pega insetos com a língua comprida.
+Pato | f | É uma ave que nada. | Tem os pés com membranas. | Tem bico achatado. | Faz “quá-quá”.
+Coruja | f | É uma ave. | Caça à noite. | Consegue girar muito a cabeça. | Tem olhos grandes e é símbolo da sabedoria.
+Papagaio | f | É uma ave colorida. | Vive em florestas tropicais, como a Amazônia. | Tem bico curvo e forte. | Consegue imitar a fala humana.
+Águia | m | É uma ave de rapina. | Tem visão muito aguçada. | Faz ninhos no alto de montanhas e árvores. | É símbolo dos Estados Unidos.
+Baleia | f | Vive no oceano, mas não é peixe. | Respira ar e sobe à superfície. | Solta um jato de água pelas costas. | É o maior animal do mundo.
+Golfinho | f | Vive no mar e é um mamífero. | É muito inteligente e brincalhão. | Se comunica com assobios e cliques. | Salta para fora da água e tem focinho comprido.
+Polvo | m | Vive no fundo do mar. | Não tem ossos. | Solta tinta quando se assusta. | Tem oito braços com ventosas.
+Abelha | f | É um inseto que voa. | Vive em colmeias com uma rainha. | Pode picar. | Produz mel.
+Formiga | f | É um inseto bem pequeno. | Vive em colônias muito organizadas. | Carrega pedaços maiores que ela mesma. | Mora num formigueiro.
+Aranha | f | Tem oito patas. | Não é inseto, é aracnídeo. | Algumas são venenosas. | Tece teias para pegar presas.
+Zebra | f | É um mamífero parecido com o cavalo. | Vive na savana africana. | Anda em manadas. | É listrada de preto e branco.
+Urso | f | É um mamífero grande e peludo. | Algumas espécies hibernam no inverno. | Gosta de mel e de peixe. | Fica em pé sobre as patas de trás.
+Canguru | f | É um mamífero. | Vive na Austrália. | Anda pulando com as patas de trás. | A mãe carrega o filhote numa bolsa na barriga.
+Panda | f | É um urso. | Vive nas montanhas da China. | Passa o dia comendo bambu. | É branco com manchas pretas em volta dos olhos.
+Capivara | f | É o maior roedor do mundo. | Vive perto de rios e lagos. | É comum no Brasil e aparece até em parques de cidades. | É famosa por ser tranquila e “amiga” de outros bichos.
+Onça-pintada | m | É um grande felino. | Vive na Amazônia e no Pantanal. | É o maior felino das Américas. | Tem pelo amarelo com pintas pretas. | Onça
+Tamanduá | m | É um mamífero brasileiro. | Tem garras fortes nas patas da frente. | Tem um focinho bem comprido. | Come formigas e cupins com a língua. | Tamanduá-bandeira
+Bicho-preguiça | f | Vive pendurado nas árvores. | Dorme muitas horas por dia. | Tem garras longas e curvas. | É famoso por se mover muito devagar. | Preguiça
+Camelo | m | É um mamífero grande. | Vive no deserto. | Aguenta muitos dias sem beber água. | Tem corcovas nas costas.
+Lobo | m | É um animal selvagem parecido com o cachorro. | Vive em alcateias. | Uiva para se comunicar. | É o vilão de várias histórias, como a da Chapeuzinho Vermelho.
+
+# comidas | Comidas | 🍕 | comida
+Pizza | f | É um prato salgado de origem italiana. | É assada no forno. | É redonda e cortada em fatias. | Tem massa, molho de tomate e queijo.
+Feijoada | f | É um prato salgado brasileiro. | Costuma ser servida aos sábados. | Acompanha arroz, couve e laranja. | É feita com feijão preto e carnes de porco.
+Pão de queijo | f | É um salgado pequeno e redondo. | É típico de Minas Gerais. | É feito com polvilho. | Leva queijo na massa.
+Pipoca | f | É um petisco feito de grão. | Combina com cinema. | Pode ser doce ou salgada. | É milho que estoura na panela.
+Arroz | f | É um grão. | É cozido na panela com água. | Está em quase todo almoço brasileiro. | Faz dupla famosa com o feijão.
+Ovo | f | É vendido em dúzias. | Tem casca frágil. | Pode ser frito, cozido ou mexido. | Tem clara e gema.
+Coxinha | f | É um salgado frito. | É vendida em lanchonetes e festas. | Tem recheio de frango. | Tem formato de gota.
+Hambúrguer | f | É um lanche. | Vem dentro de um pão redondo. | É vendido em lanchonetes e redes de fast-food. | Tem uma carne moída redonda e achatada. | Hamburguer;X-burguer
+Cachorro-quente | f | É um lanche. | É vendido em carrinhos de rua e festas. | Leva molho, batata palha e ketchup. | É uma salsicha dentro de um pão comprido. | Hot dog;Cachorro quente
+Lasanha | f | É um prato de massa italiana. | Vai ao forno numa travessa. | Tem molho e queijo derretido por cima. | É feita com camadas de massa e recheio.
+Macarrão | f | É uma massa. | É cozido em água fervendo. | Pode ser espaguete, parafuso ou penne. | Muita gente come com molho de tomate no almoço de domingo. | Espaguete;Massa
+Batata frita | f | É um acompanhamento. | É feita de um tubérculo. | É crocante e salgadinha. | Vem em palitos ao lado do hambúrguer.
+Pastel | f | É um salgado frito. | É vendido em feiras livres. | Tem massa fininha e crocante. | Combina com caldo de cana.
+Esfiha | m | É um salgado de origem árabe. | É assada no forno. | Pode ser aberta ou fechada. | Tem recheio de carne temperada. | Esfirra
+Tapioca | m | É feita de um derivado da mandioca. | É típica do Nordeste. | É branquinha e preparada na frigideira. | É dobrada ao meio com recheio dentro.
+Cuscuz | m | É feito com farinha de milho. | É muito comum no café da manhã do Nordeste. | É cozido no vapor numa panela própria. | É amarelinho e tem formato de bolo.
+Acarajé | m | É uma comida típica da Bahia. | É vendido por baianas com roupas tradicionais. | É frito no azeite de dendê. | É um bolinho de feijão recheado com vatapá e camarão.
+Churrasco | f | É um jeito de preparar carne. | Reúne a família e os amigos no fim de semana. | Leva carvão e espetos. | É feito na churrasqueira.
+Sushi | f | É uma comida japonesa. | Leva arroz temperado. | É comido com hashi. | Tem peixe cru e alga enrolados.
+Estrogonofe | f | É um prato cremoso. | Leva creme de leite. | Pode ser de carne ou de frango. | É servido com arroz e batata palha. | Strogonoff;Estrogonófe
+Moqueca | m | É um prato com peixe ou frutos do mar. | É típica da Bahia e do Espírito Santo. | Leva leite de coco e pimentões. | É feita numa panela de barro.
+Farofa | f | É um acompanhamento. | É feita com farinha de mandioca. | Pode levar bacon, ovo ou banana. | Não falta no churrasco e na feijoada.
+Empada | m | É um salgado pequeno. | É assada numa forminha. | Tem uma massa que esfarela. | Costuma ter recheio de frango ou palmito. | Empadinha
+Sopa | f | É servida quente. | É mais comum no inverno. | É comida de colher numa tigela. | É um caldo com legumes, macarrão ou carne.
+Salada | f | É um prato frio. | É considerada saudável. | É temperada com azeite, sal e limão. | É feita com folhas como alface e tomate.
+Omelete | f | É rápida de fazer. | É preparada na frigideira. | Pode ter queijo, presunto ou legumes. | É feita com ovos batidos.
+Pão francês | f | É vendido na padaria. | É comprado quentinho de manhã. | Tem casca crocante e miolo macio. | É o pão mais comum do café da manhã brasileiro. | Pão;Pãozinho;Cacetinho
+Taco | m | É uma comida mexicana. | Costuma ser apimentado. | Leva carne, alface e molho. | É servido numa tortilha dobrada em forma de U.
+Nhoque | m | É uma massa italiana. | É feito com batata. | Tem formato de bolinhas ou travesseirinhos. | Tem tradição de ser comido no dia 29 de cada mês.
+Risoto | m | É um prato italiano. | Leva um arroz especial. | Precisa ser mexido sem parar. | Fica cremoso com queijo parmesão.
+Panqueca | f | É feita com uma massa fina. | É preparada na frigideira. | Pode ser doce ou salgada. | É enrolada com recheio e coberta com molho.
+Misto-quente | f | É um lanche rápido. | É feito na sanduicheira ou na chapa. | Leva duas fatias de pão. | Tem presunto e queijo derretido. | Misto quente;Misto
+Parmegiana | m | É um prato de restaurante. | Leva bife empanado. | É coberto com molho de tomate. | Tem queijo derretido gratinado por cima. | Bife à parmegiana
+Feijão | f | É um grão. | É cozido na panela de pressão. | Pode ser carioca ou preto. | Faz dupla com o arroz.
+Frango assado | f | É uma carne de ave. | É vendido girando em máquinas em padarias e mercados. | Fica com a pele dourada. | É comum no almoço de domingo. | Frango
+Pamonha | m | É feita de milho verde. | É típica das festas juninas. | Pode ser doce ou salgada. | É cozida embrulhada na palha do milho.
+Baião de dois | m | É um prato nordestino. | Leva queijo coalho. | Mistura dois ingredientes principais. | É feito com arroz e feijão cozidos juntos.
+Vatapá | m | É uma comida baiana. | Leva dendê e leite de coco. | É um creme grosso. | É feito com pão ou farinha, camarão e amendoim.
+Escondidinho | m | É um prato de forno. | Tem uma camada de purê por cima. | O purê costuma ser de mandioca. | Esconde carne seca ou frango por baixo.
+Polenta | m | É feita com fubá. | É típica da culinária italiana do Sul do Brasil. | Pode ser mole ou frita em palitos. | É amarelinha.
+
+# doces | Doces e sobremesas | 🍰 | comida
+Brigadeiro | f | É um doce brasileiro. | É feito com leite condensado. | Não pode faltar em festa de aniversário. | É uma bolinha de chocolate com granulado. | Negrinho
+Sorvete | f | É uma sobremesa gelada. | Derrete se ficar no sol. | Tem muitos sabores. | Vem na casquinha ou no pote. | Picolé
+Chocolate | f | É doce. | Derrete no calor. | É feito de cacau. | Vem em barra ou em bombom.
+Bolo | f | É doce e vai ao forno. | É feito com farinha, ovos e açúcar. | Pode ter cobertura e recheio. | Ganha velinhas no aniversário.
+Pudim | f | É uma sobremesa gelada. | É feito numa forma com furo no meio. | Leva leite condensado e ovos. | Tem calda de caramelo por cima.
+Beijinho | f | É um docinho de festa. | É feito com leite condensado. | É branquinho e enrolado no coco ralado. | Leva um cravo espetado em cima.
+Quindim | m | É um doce amarelo e brilhante. | É feito com muitas gemas. | Leva coco ralado na base. | É de origem portuguesa e muito comum nas padarias.
+Cocada | f | É um doce de tabuleiro. | É vendido na praia e em feiras. | Pode ser branca ou queimada. | É feita de coco e açúcar.
+Paçoca | f | É um doce de festa junina. | Esfarela quando a gente abre. | Vem em tablete ou rolha. | É feita de amendoim moído.
+Pé de moleque | m | É um doce de festa junina. | É bem duro e crocante. | Leva açúcar ou rapadura derretida. | Tem amendoins inteiros grudados. | Pé-de-moleque
+Doce de leite | f | É um doce cremoso. | É feito cozinhando leite com açúcar por muito tempo. | É marrom-claro. | É muito famoso em Minas Gerais.
+Goiabada | f | É um doce firme cortado em fatias. | É vermelho-escuro. | É feita de fruta. | Combina com queijo minas.
+Pavê | m | É uma sobremesa de travessa. | É feita em camadas. | Leva biscoito champanhe ou maisena. | É campeão das sobremesas de Natal e de uma piada famosa de tio.
+Gelatina | f | É uma sobremesa gelada. | Fica tremendo no prato. | É vendida em pó com vários sabores. | É colorida e transparente.
+Mousse de maracujá | m | É uma sobremesa gelada e aerada. | É azedinha e doce ao mesmo tempo. | Leva creme de leite e leite condensado. | É feita com uma fruta amarela de sementes pretas. | Musse de maracujá;Mousse
+Torta de limão | m | É uma sobremesa com base de biscoito. | Tem um creme azedinho. | Leva merengue por cima. | É feita com uma fruta verde e ácida.
+Churros | f | É um doce frito. | É comprido e tem formato de estrela. | É polvilhado com açúcar e canela. | É recheado com doce de leite. | Churro
+Sonho | m | É vendido na padaria. | É uma massa frita e fofa. | É polvilhado com açúcar. | É recheado com creme amarelo.
+Donut | m | É um doce de origem americana. | É frito e tem cobertura. | Pode ter granulado colorido. | Tem formato de rosquinha com furo no meio. | Rosquinha;Rosca
+Pirulito | f | É um doce duro. | Dura bastante tempo na boca. | É colorido. | Tem um palito para segurar.
+Chiclete | f | É uma guloseima. | Não é para engolir. | Dá para fazer bolas com ele. | A gente mastiga por muito tempo. | Goma de mascar
+Bala | f | É uma guloseima pequena. | Vem embrulhada num papelzinho. | Pode ser de goma, de hortelã ou de caramelo. | A gente chupa até acabar. | Bala de goma
+Algodão-doce | f | É vendido em parques e festas. | É feito numa máquina que gira. | Derrete na boca. | É fofinho e parece uma nuvem cor-de-rosa. | Algodão doce
+Maçã do amor | m | É vendida em festas juninas. | Tem um palito espetado. | Tem uma casca dura e vermelha brilhante. | É uma fruta coberta com calda de açúcar.
+Arroz-doce | m | É uma sobremesa cremosa. | É feita com um grão. | Leva leite e açúcar. | É polvilhada com canela. | Arroz doce
+Canjica | m | É típica das festas juninas. | É servida quente ou fria. | Leva leite, açúcar e amendoim. | É feita com grãos de milho branco. | Mungunzá
+Curau | m | É um creme doce. | É típico das festas juninas. | É feito de milho verde. | É amarelinho e polvilhado com canela.
+Bolo de cenoura | f | É um bolo fofinho. | É alaranjado por dentro. | É feito com um legume. | Tem cobertura de chocolate.
+Pão de mel | m | É um bolinho. | Leva especiarias como canela e cravo. | É coberto com chocolate. | Leva mel na massa.
+Brownie | m | É um doce de origem americana. | É cortado em quadradinhos. | É úmido por dentro e tem casquinha por cima. | É de chocolate e pode ter nozes.
+Cookie | m | É um biscoito. | É de origem americana. | É grande, redondo e meio molinho. | Tem gotas de chocolate. | Biscoito
+Bombom | f | É uma guloseima pequena. | Vem embrulhado em papel brilhante. | Pode ter recheio cremoso ou de fruta. | É coberto de chocolate.
+Ovo de Páscoa | f | É feito de chocolate. | É oco por dentro. | Vem embrulhado em papel colorido. | É presente tradicional de abril.
+Panetone | f | É um pão doce. | É de origem italiana. | Vem numa caixa alta. | Tem frutas cristalizadas e é comido no Natal. | Chocotone
+Rabanada | m | É um doce de Natal. | É feita com pão amanhecido. | É frita. | É passada no açúcar com canela.
+Petit gâteau | m | É uma sobremesa de restaurante. | É servido quente. | Vem acompanhado de sorvete. | É um bolinho de chocolate com recheio derretido. | Petit gateau
+Cupcake | m | É um bolinho individual. | É assado em forminha de papel. | Tem cobertura alta e decorada. | É de origem americana.
+Waffle | m | É uma massa feita numa máquina própria. | É crocante por fora. | Pode levar mel, frutas ou sorvete. | Tem formato quadriculado.
+Romeu e Julieta | m | É uma sobremesa mineira. | Tem nome de casal famoso. | Mistura doce e salgado. | É goiabada com queijo.
+Açaí na tigela | f | É servido gelado. | Vem de uma fruta da Amazônia. | Pode levar granola, banana e leite em pó. | É roxo-escuro e servido em tigela ou copo. | Açaí
+
+# bebidas | Bebidas | 🥤 | comida
+Água | f | Não tem cor nem cheiro. | O corpo precisa dela todos os dias. | Sai da torneira e do filtro. | É a bebida mais importante para a vida.
+Suco de laranja | f | É uma bebida natural. | É comum no café da manhã. | É feito espremendo uma fruta cítrica. | É alaranjado.
+Leite | f | É uma bebida branca. | Vem de um animal. | Pode ser integral ou desnatado. | Vem da vaca.
+Café | f | É uma bebida quente e escura. | Tem cafeína e ajuda a despertar. | É feito com grãos torrados e moídos. | É tomado no cafezinho depois do almoço. | Cafezinho
+Chá | f | É uma bebida feita por infusão. | Pode ser quente ou gelado. | É feito com folhas, ervas ou flores. | Vem em saquinhos que mergulhamos na água quente.
+Refrigerante | f | É uma bebida doce e gelada. | Tem gás. | Vem em lata ou garrafa PET. | Pode ser de cola, guaraná ou laranja. | Refri
+Água de coco | f | É natural e refrescante. | É muito vendida na praia. | É tomada de canudinho. | Vem de dentro de uma fruta verde.
+Caldo de cana | m | É doce e natural. | É vendido em feiras junto com pastel. | É feito numa máquina que espreme. | Vem de uma planta usada para fazer açúcar. | Garapa
+Limonada | f | É refrescante. | É feita com água e açúcar. | É azedinha. | É feita com uma fruta cítrica verde.
+Chocolate quente | f | É uma bebida quente e doce. | É mais pedida no inverno. | É cremosa. | É feita com leite e cacau.
+Milk-shake | f | É uma bebida gelada e grossa. | É tomado de canudo. | É vendido em lanchonetes. | É feito batendo sorvete com leite. | Milkshake;Milk shake
+Vitamina de banana | f | É feita no liquidificador. | É comum no café da manhã. | Leva leite. | É feita com uma fruta amarela. | Vitamina
+Chimarrão | m | É uma bebida quente e amarga. | É típica do Rio Grande do Sul. | É servido numa cuia com bomba. | É feito com erva-mate.
+Tereré | m | É uma bebida gelada. | É típica do Mato Grosso do Sul e do Paraguai. | É tomada numa cuia com bomba. | É feita com erva-mate e água fria.
+Guaraná | f | É um refrigerante. | É dourado. | Tem o nome de uma fruta da Amazônia. | É um sabor de refri muito brasileiro.
+Suco de uva | f | É uma bebida natural. | Também é vendido em garrafa, integral. | É roxo-escuro. | É feito da mesma fruta do vinho.
+Cappuccino | m | É uma bebida quente de cafeteria. | Tem espuma por cima. | Pode levar canela ou chocolate. | Mistura café e leite vaporizado. | Capuccino;Capuchino
+Achocolatado | f | É uma bebida que as crianças adoram. | Vem em caixinha ou em pó. | É marrom. | É leite com chocolate. | Leite com chocolate;Toddynho
+Água com gás | m | Não tem açúcar. | Vem em garrafa. | Faz bolhinhas. | É como água comum, mas com bolinhas que fazem cócegas na língua. | Água gaseificada
+Chá gelado | m | É refrescante. | É vendido em garrafas e latas. | Pode ter sabor de limão ou pêssego. | É chá servido frio.
+Mate gelado | m | É típico das praias do Rio de Janeiro. | É vendido por ambulantes com galões nas costas. | Combina com biscoito de polvilho. | É feito com erva-mate tostada e servido gelado. | Mate
+Suco de maracujá | f | É uma bebida natural. | Tem fama de acalmar. | É azedinho. | É feito de uma fruta amarela com sementes pretas.
+Café com leite | f | É comum no café da manhã. | É servido numa xícara ou copo americano. | É marrom-claro. | É metade café e metade leite. | Pingado
+Vinho | m | É uma bebida alcoólica. | Pode ser tinto, branco ou rosé. | Fica guardado em barris e garrafas com rolha. | É feito de uva fermentada.
+Cerveja | m | É uma bebida alcoólica. | É servida bem gelada. | Tem espuma. | É feita de cevada e lúpulo. | Chope
+Caipirinha | m | É uma bebida alcoólica brasileira. | É feita com cachaça. | Leva gelo e açúcar. | Leva limão amassado.
+Champanhe | m | É uma bebida alcoólica com gás. | É usado em comemorações. | A rolha estoura ao abrir. | É tradicional na virada do Ano-Novo. | Champagne;Espumante
+Quentão | m | É servido quente. | É típico das festas juninas. | Leva gengibre e canela. | É feito com cachaça ou vinho.
+Gemada | m | É uma bebida antiga de vó. | É cremosa e amarela. | Era dada para quem estava gripado ou fraco. | É feita batendo gema com açúcar.
+Isotônico | m | É bebida de atleta. | Repõe sais minerais. | É colorido. | É tomado durante exercícios. | Gatorade
+Energético | m | Vem em latinha. | Tem muita cafeína. | Promete dar energia. | Não é recomendado para crianças.
+Água tônica | m | É um refrigerante amargo. | Tem gás. | É transparente. | Brilha sob luz negra. | Tônica
+Leite fermentado | f | Vem em potinhos pequenos. | É doce e azedinho. | Tem lactobacilos vivos. | As crianças tomam de uma vez só. | Yakult
+Café expresso | m | É servido em xícara pequena. | É bem forte e concentrado. | É feito numa máquina com pressão. | Tem uma camada de creme por cima. | Expresso
+Suco verde | m | É famoso entre quem faz dieta. | É feito no liquidificador. | Leva couve. | É verde.
+Chá de camomila | m | É uma bebida quente. | Ajuda a relaxar e dormir. | É amarelado. | É feito de uma florzinha branca com miolo amarelo. | Camomila
+Groselha | m | É um xarope. | É vermelho bem forte. | É misturado com água ou leite. | Era muito comum nas festas infantis antigas.
+Iogurte | f | É um laticínio. | É fermentado. | Pode ter pedaços de fruta. | Vem em potinho ou garrafinha.
+Suco de acerola | m | É rico em vitamina C. | É vermelho-alaranjado. | É feito de uma fruta pequena e azedinha. | A fruta cresce num arbusto comum em quintais.
+Vitamina de abacate | m | É feita no liquidificador. | É verdinha e cremosa. | Leva leite e açúcar. | É feita de uma fruta grande com caroço.
+
+# frutas | Frutas e legumes | 🍎 | comida
+Banana | f | É uma fruta. | Cresce em cachos. | É rica em potássio. | É amarela e a gente descasca.
+Melancia | f | É uma fruta grande e pesada. | Tem muita água e é refrescante. | Tem sementes pretas. | É verde por fora e vermelha por dentro.
+Maçã | f | É uma fruta. | Pode ser vermelha, verde ou amarela. | É crocante e tem sementinhas no meio. | Na história da Branca de Neve, estava envenenada.
+Laranja | f | É uma fruta cítrica. | Tem gomos. | É usada no suco mais comum do café da manhã. | Tem o mesmo nome da sua cor.
+Uva | f | É uma fruta pequena. | Cresce em cachos. | Pode ser verde ou roxa. | É usada para fazer vinho e passas.
+Morango | f | É uma fruta pequena e vermelha. | Tem sementinhas do lado de fora. | Tem folhinhas verdes em cima. | Combina com chantili e chocolate.
+Abacaxi | f | É uma fruta tropical. | É doce e azedinha. | Tem casca dura e cheia de escamas. | Tem uma coroa de folhas espinhudas.
+Manga | f | É uma fruta tropical. | Tem um caroço grande e fibroso. | Escorre pelo queixo quando a gente come. | Cresce numa árvore enorme e frondosa.
+Mamão | f | É uma fruta tropical. | Ajuda a soltar o intestino. | É alaranjado por dentro. | Tem muitas sementes pretinhas no meio. | Papaia
+Limão | f | É uma fruta cítrica. | É bem azedo. | Vai na caipirinha e na limonada. | É pequeno e verde.
+Pera | m | É uma fruta. | É suculenta e doce. | É verde-clara ou amarelada. | É mais fina em cima e larga embaixo.
+Kiwi | m | É uma fruta de origem asiática. | Tem casca marrom e peludinha. | É azedinha. | É verde por dentro com sementinhas pretas.
+Cereja | m | É uma fruta pequena e vermelha. | Tem caroço. | Tem um cabinho comprido. | É usada para enfeitar bolos e sorvetes.
+Coco | f | É uma fruta tropical. | Cresce em palmeiras perto da praia. | Tem casca muito dura. | Tem água e uma polpa branca dentro.
+Goiaba | f | É uma fruta tropical. | Pode ser branca ou vermelha por dentro. | Tem muitas sementinhas duras. | É usada para fazer goiabada.
+Maracujá | f | É uma fruta tropical. | É bem azedo. | Tem casca amarela que enruga quando amadurece. | Tem sementes pretas com uma polpa gelatinosa.
+Abacate | f | É uma fruta grande. | Tem um caroço enorme no meio. | Tem casca verde-escura. | É cremoso e usado no guacamole.
+Melão | m | É uma fruta grande. | É doce e suculento. | Tem casca amarela ou esverdeada. | Tem polpa clara e sementes no meio.
+Pêssego | m | É uma fruta de caroço. | Tem casca aveludada. | É amarelo-rosado. | É muito vendido em calda, em lata.
+Jabuticaba | m | É uma fruta brasileira. | É pretinha e redonda. | Tem casca firme e polpa branca e doce. | Nasce grudada no tronco da árvore.
+Caju | m | É uma fruta do Nordeste. | É vermelho ou amarelo. | É azedinho e “trava” a boca. | Tem uma castanha pendurada embaixo.
+Pitanga | m | É uma fruta brasileira pequena. | É vermelha. | Tem gominhos, como uma abóbora em miniatura. | É azedinha e comum em quintais.
+Tomate | f | É vermelho e redondo. | É usado em saladas e molhos. | Botanicamente, é uma fruta. | É a base do ketchup.
+Cenoura | f | É um legume. | Cresce debaixo da terra. | Dizem que faz bem para os olhos. | É laranja, comprida e a preferida do coelho.
+Batata | f | É um tubérculo. | Cresce debaixo da terra. | Vira purê, chips e palito frito. | Tem casca marrom e é amarelinha por dentro. | Batatinha
+Cebola | f | É um bulbo. | É usada para temperar quase tudo. | Tem várias camadas. | Faz a gente chorar quando corta.
+Alho | f | É um tempero. | Tem cheiro bem forte. | Vem em dentes dentro de uma cabeça. | Dizem que espanta vampiros.
+Alface | f | É uma verdura. | Tem folhas verdes e crocantes. | É a base de quase toda salada. | Vai dentro do hambúrguer.
+Brócolis | f | É um vegetal verde. | Muitas crianças não gostam. | É cozido no vapor. | Parece uma arvorezinha. | Brocolis
+Abóbora | f | É um legume grande. | É alaranjada por dentro. | Tem casca dura e sementes. | É símbolo do Halloween. | Jerimum;Moranga
+Milho | f | É um cereal. | Cresce em espigas. | Os grãos são amarelos. | É usado para fazer pipoca e pamonha. | Milho verde
+Pepino | m | É um legume comprido. | É verde-escuro por fora. | É fresquinho e cheio de água. | É usado em saladas e conservas.
+Pimentão | m | É um legume oco. | Pode ser verde, vermelho ou amarelo. | Tem sementinhas dentro. | Tem sabor forte, mas não arde.
+Beterraba | m | É um legume. | Cresce debaixo da terra. | Mancha as mãos e a roupa. | É roxo-avermelhada.
+Berinjela | m | É um legume. | Tem casca roxa e brilhante. | É branca e esponjosa por dentro. | É muito servida à parmegiana.
+Mandioca | f | É uma raiz. | Também é chamada por outros nomes, dependendo da região. | Tem casca marrom e é branca por dentro. | É cozida ou frita, e vira farinha. | Aipim;Macaxeira
+Couve-flor | m | É um vegetal. | É parente do brócolis. | É gratinada com queijo. | É branca e parece uma nuvem. | Couve flor
+Chuchu | m | É um legume verde-claro. | Tem fama de não ter gosto. | Tem casca meio espinhenta. | Virou apelido carinhoso.
+Quiabo | m | É um legume verde e comprido. | Solta uma baba ao cozinhar. | É comum na comida mineira. | Vai no frango com ele, num prato famoso.
+Ervilha | f | É um grão verde. | Vem dentro de uma vagem. | É vendida em lata. | Vai na salada de maionese.

@@ -1,0 +1,209 @@
+# corpo | Corpo humano | 🫀 | geral
+Coração | f | É um órgão. | Fica no peito. | Bate o tempo todo. | Bombeia o sangue.
+Cérebro | f | É um órgão. | Fica dentro da cabeça. | É protegido pelo crânio. | Comanda o corpo e os pensamentos.
+Pulmão | f | É um órgão. | Temos dois. | Fica no peito. | Serve para respirar. | Pulmões
+Estômago | f | É um órgão. | Fica na barriga. | Ronca quando estamos com fome. | Digere a comida.
+Olho | f | Temos dois. | Fica no rosto. | Pisca. | Serve para enxergar. | Olhos
+Nariz | f | Fica no meio do rosto. | Tem duas narinas. | Escorre quando estamos gripados. | Serve para sentir cheiros.
+Boca | f | Fica no rosto. | Tem dentes e língua. | Abre e fecha. | Serve para comer e falar.
+Orelha | f | Temos duas. | Fica dos lados da cabeça. | É onde se coloca brinco. | Serve para ouvir. | Orelhas;Ouvido
+Dente | f | É duro e branco. | Temos os de leite e os permanentes. | Precisa ser escovado. | Serve para mastigar. | Dentes
+Língua | f | Fica dentro da boca. | É um músculo. | Sente os sabores. | Dá para mostrar para fora.
+Mão | f | Temos duas. | Tem cinco dedos. | Serve para pegar coisas. | Fica na ponta do braço. | Mãos
+Pé | f | Temos dois. | Tem cinco dedos. | Usa sapato e meia. | Serve para andar. | Pés
+Cabelo | f | Cresce sem parar. | Pode ser liso, ondulado ou crespo. | Fica na cabeça. | É cortado no salão. | Cabelos
+Unha | f | Cresce sem parar. | Fica na ponta dos dedos. | Pode ser pintada com esmalte. | É cortada com cortador. | Unhas
+Joelho | f | É uma articulação. | Fica no meio da perna. | Dobra quando sentamos. | A gente rala quando cai.
+Cotovelo | m | É uma articulação. | Fica no meio do braço. | Dobra o braço. | Dizem que é impossível lamber o próprio.
+Pele | f | É o maior órgão do corpo. | Cobre o corpo todo. | Pode ficar bronzeada. | Protege o corpo.
+Osso | f | É duro. | É branco. | Pode quebrar. | O cachorro adora roer. | Ossos
+Sangue | f | É vermelho. | Corre pelas veias. | Pode ser doado. | O coração bombeia ele.
+Esqueleto | f | É o conjunto de ossos. | Sustenta o corpo. | Aparece no Halloween. | Tem crânio e costelas.
+Umbigo | f | Fica na barriga. | É uma cicatriz. | Vem do cordão que ligava o bebê à mãe. | Todo mundo tem um.
+Barriga | f | Fica na frente do corpo. | Cresce quando comemos muito. | Fica grande na gravidez. | Tem o umbigo. | Abdômen;Pança
+Costas | f | Ficam atrás do corpo. | Não conseguimos ver sem espelho. | Doem quando carregamos peso. | É onde fica a coluna.
+Ombro | f | É uma articulação. | Liga o braço ao tronco. | Dá para encolher quando não sabemos algo. | É onde se apoia a alça da mochila. | Ombros
+Pescoço | f | Liga a cabeça ao corpo. | Gira. | É onde se usa colar. | A girafa tem um bem comprido.
+Dedo | f | Temos vinte. | Tem unha. | Tem impressão digital. | Fica nas mãos e nos pés. | Dedos
+Fígado | m | É um órgão. | É o maior órgão interno. | Fica do lado direito da barriga. | Ajuda a limpar o sangue.
+Rim | m | É um órgão. | Temos dois. | Tem formato de feijão. | Produz a urina. | Rins
+Músculo | m | Fica sob a pele. | Cresce com exercício. | Contrai e relaxa. | Movimenta o corpo. | Músculos
+Sobrancelha | f | Fica no rosto. | É feita de pelos. | Fica acima dos olhos. | Sobe quando ficamos surpresos. | Sobrancelhas
+Cílios | m | São pelinhos. | Ficam nas pálpebras. | Protegem os olhos. | Recebem rímel. | Cílio;Pestanas
+Bochecha | f | Fica no rosto. | Fica vermelha de vergonha. | As avós adoram apertar. | Fica dos lados do nariz. | Bochechas
+Queixo | f | Fica no rosto. | Fica na parte de baixo. | Alguns têm covinha. | É onde cresce a barba.
+Testa | f | Fica no rosto. | Fica acima dos olhos. | Enruga quando ficamos preocupados. | É onde a mãe põe a mão para ver se temos febre.
+Calcanhar | m | Fica no pé. | Fica atrás. | É a parte que encosta primeiro no chão. | Na mitologia, era o ponto fraco de Aquiles.
+Tornozelo | m | É uma articulação. | Liga o pé à perna. | Torce quando pisamos errado. | Fica logo acima do pé.
+Intestino | m | É um órgão. | É muito comprido. | Fica enrolado na barriga. | Absorve os nutrientes da comida. | Intestinos
+Coluna | m | É feita de vértebras. | Fica nas costas. | Sustenta o corpo. | Protege a medula. | Coluna vertebral
+Lábios | f | Ficam na boca. | São macios. | Recebem batom. | Servem para dar beijo. | Lábio;Boca
+Bexiga | m | É um órgão. | Fica na parte de baixo da barriga. | Enche ao longo do dia. | Guarda o xixi.
+
+# tecnologia | Tecnologia | 💻 | objeto
+Celular | f | É um aparelho eletrônico. | Precisa ser carregado na tomada. | Tem tela sensível ao toque. | Serve para ligar e mandar mensagens. | Smartphone;Telefone celular
+Computador | f | É um aparelho eletrônico. | Tem monitor, teclado e mouse. | Fica numa mesa. | Serve para trabalhar, estudar e acessar a internet. | PC
+Notebook | f | É um computador. | É portátil. | Abre e fecha como um livro. | Funciona com bateria. | Laptop
+Tablet | f | É um aparelho eletrônico. | Tem tela sensível ao toque. | É maior que um celular. | É fino e não tem teclado. | iPad
+Internet | f | Não dá para tocar. | Conecta o mundo inteiro. | Precisa de sinal ou cabo. | É onde ficam os sites e as redes sociais.
+Controle remoto | f | É pequeno e tem botões. | Funciona com pilhas. | Vive sumindo no sofá. | Muda o canal da TV. | Controle
+Fone de ouvido | f | É um acessório. | Liga no celular. | Pode ter fio ou ser sem fio. | Toca música só para quem está usando. | Fone
+Câmera | f | É um aparelho. | Tem lente. | Tem flash. | Tira fotos. | Máquina fotográfica;Câmera fotográfica
+Drone | m | Voa. | É controlado à distância. | Tem várias hélices. | Filma lá de cima.
+Robô | f | É uma máquina. | Pode ter forma de pessoa. | É programado. | Faz tarefas sozinho. | Robo
+Impressora | f | Fica perto do computador. | Usa tinta ou toner. | Às vezes o papel enrosca. | Põe no papel o que está na tela.
+Mouse | f | É pequeno. | Fica na mesa. | Tem botões e rodinha. | Move a setinha na tela do computador.
+Teclado de computador | f | Tem muitas teclas. | Tem letras e números. | Tem barra de espaço. | Serve para digitar. | Teclado
+Pendrive | m | É pequeno. | Cabe no bolso. | Liga na entrada USB. | Guarda arquivos. | Pen drive
+Wi-Fi | f | Não dá para ver. | Tem senha. | Precisa de um roteador. | É a internet sem fio. | Wifi;Wi fi
+Smartwatch | m | Vai no pulso. | Mostra as horas. | Conta passos e batimentos. | É um relógio inteligente. | Relógio inteligente
+Rádio | f | É um aparelho antigo. | Tem estações AM e FM. | Tem locutores. | Toca música e notícias.
+Telefone fixo | m | Fica na parede ou na mesa. | Tem fio. | Tem gancho. | Era o jeito de ligar antes do celular. | Telefone
+Caixa de som | f | É um aparelho. | Pode ser portátil. | Tem botão de volume. | Toca música alto. | Alto-falante
+GPS | m | Usa satélites. | Mostra a localização. | Diz para virar à direita ou à esquerda. | Ajuda a não se perder no trânsito.
+QR code | m | É um quadrado. | É preto e branco. | É lido pela câmera do celular. | Leva a um site ou a um pagamento. | QRcode;Código QR
+Carregador | f | Tem fio. | Liga na tomada. | Tem uma ponta que encaixa no aparelho. | Recarrega o celular.
+Pilha | f | É pequena. | Tem polo positivo e negativo. | Vai em controles e brinquedos. | Dá energia aos aparelhos. | Pilhas;Bateria
+Calculadora | f | Tem números. | Tem botões. | Tem visor. | Faz contas.
+Projetor | m | É um aparelho. | Joga luz numa parede. | É usado em aulas e cinemas. | Mostra imagens grandes.
+Óculos de realidade virtual | m | Vai no rosto. | Tapa os olhos. | Cria um mundo em 3D. | Faz parecer que você está em outro lugar. | Realidade virtual;Óculos VR
+Inteligência artificial | m | Não dá para tocar. | Aprende com dados. | Conversa e responde perguntas. | É usada em assistentes virtuais. | IA
+Aplicativo | f | Fica no celular. | Tem um ícone. | É baixado numa loja. | Serve para tarefas como pedir comida ou conversar. | App
+E-mail | f | É uma mensagem. | Tem assunto e destinatário. | Tem arroba no endereço. | É um correio eletrônico. | Email
+Senha | f | É secreta. | Pode ter letras e números. | Não pode contar para ninguém. | Protege contas e celulares.
+Emoji | f | É pequeno. | É usado em mensagens. | Mostra emoções. | Muitos são carinhas amarelas. | Emojis;Emoticon
+Selfie | f | É uma foto. | É tirada com o celular. | Usa a câmera da frente. | É uma foto de si mesmo.
+Webcam | m | É uma câmera pequena. | Fica em cima da tela. | É usada em videochamadas. | Liga no computador.
+Microfone | f | Capta a voz. | É usado por cantores. | Liga em caixa de som. | Deixa a voz mais alta.
+Bluetooth | m | Não dá para ver. | Conecta aparelhos sem fio. | Tem curto alcance. | Liga fones e caixas de som.
+Rede social | f | Fica na internet. | Tem perfis e seguidores. | Tem curtidas e comentários. | É onde as pessoas postam fotos. | Redes sociais
+Site | f | Fica na internet. | Tem um endereço. | Tem páginas e links. | Abre no navegador. | Website;Página
+Disquete | m | É antigo. | É quadrado. | Guardava arquivos. | Virou o ícone de “salvar”.
+Fita cassete | m | É antiga. | Tem duas rodinhas. | Era preciso rebobinar, às vezes com uma caneta. | Tocava músicas. | Fita K7;Cassete
+DVD | m | É redondo. | Brilha. | Guarda filmes. | Toca num aparelho ligado à TV.
+
+# ciencia | Ciência e espaço | 🚀 | geral
+Terra | f | É um planeta. | Tem água e vida. | É o terceiro planeta a partir do Sol. | É onde a gente mora. | Planeta Terra
+Marte | f | É um planeta. | É chamado de planeta vermelho. | Tem robôs explorando sua superfície. | É vizinho da Terra.
+Júpiter | m | É um planeta. | É o maior do Sistema Solar. | É feito principalmente de gás. | Tem uma grande mancha vermelha. | Jupiter
+Saturno | f | É um planeta. | É um gigante gasoso. | Tem muitas luas. | Tem anéis famosos.
+Vênus | m | É um planeta. | É o mais quente do Sistema Solar. | Brilha muito no céu e é chamado de Estrela d’Alva. | Tem o nome da deusa romana do amor. | Venus
+Mercúrio | m | É um planeta. | É o menor do Sistema Solar. | É o mais próximo do Sol. | Também é o nome de um metal líquido. | Mercurio
+Plutão | m | Fica muito longe do Sol. | É muito frio. | Tem uma área em formato de coração. | Deixou de ser considerado planeta em 2006. | Plutao
+Netuno | m | É um planeta. | É azul. | É o mais distante do Sol. | Tem o nome do deus romano dos mares.
+Urano | m | É um planeta. | É azul-esverdeado. | Gira “deitado”. | É o sétimo a partir do Sol.
+Cometa | m | Viaja pelo espaço. | É feito de gelo e poeira. | Tem uma cauda brilhante. | O Halley é o mais famoso.
+Meteoro | m | Aparece no céu à noite. | Risca o céu rapidamente. | É chamado de estrela cadente. | É uma pedra queimando na atmosfera. | Estrela cadente
+Galáxia | m | Fica no espaço. | É enorme. | Tem bilhões de estrelas. | Pode ter formato espiral. | Galaxia
+Via Láctea | m | Fica no espaço. | É uma galáxia. | Parece uma faixa leitosa no céu. | É onde fica o Sistema Solar. | Via Lactea
+Buraco negro | m | Fica no espaço. | Tem gravidade enorme. | Nem a luz escapa dele. | Engole tudo que chega perto.
+Satélite | m | Fica em órbita. | Pode ser natural ou artificial. | Transmite sinal de TV e GPS. | Gira em volta de um planeta. | Satelite
+Telescópio | f | É um instrumento. | Tem lentes ou espelhos. | É usado à noite. | Serve para ver estrelas e planetas. | Luneta
+Microscópio | f | É um instrumento. | Fica em laboratórios. | Tem lentes. | Mostra coisas muito pequenas.
+Ímã | f | Pode estar na porta da geladeira. | Tem polo norte e sul. | Atrai metais. | Gruda no ferro. | Imã;Imã de geladeira
+Átomo | m | É muito pequeno. | Não dá para ver. | Tem prótons, nêutrons e elétrons. | Forma tudo que existe. | Atomo
+DNA | m | Fica dentro das células. | Tem formato de dupla hélice. | Guarda as informações genéticas. | É usado em testes de paternidade.
+Dinossauro | f | Viveu há milhões de anos. | Era um réptil. | Foi extinto, talvez por causa de um asteroide. | O T-rex é o mais famoso. | Dinossauros
+Fóssil | m | É muito antigo. | Fica nas rochas. | É estudado por paleontólogos. | É o resto de um ser vivo que virou pedra. | Fossil;Fósseis
+Eclipse | m | Acontece no céu. | É raro. | Não se deve olhar sem proteção. | Acontece quando a Lua tapa o Sol, ou quando a Terra faz sombra na Lua.
+Gravidade | m | Não dá para ver. | Faz as coisas caírem. | Mantém a gente no chão. | Lembra a história de Newton e a maçã.
+Eletricidade | f | Não dá para ver. | Passa pelos fios. | Pode dar choque. | Acende as lâmpadas. | Energia elétrica
+Estação espacial | m | Fica em órbita. | Tem astronautas morando. | Dá voltas na Terra. | É um laboratório no espaço.
+Lupa | f | Tem uma lente. | Tem um cabo. | Aumenta as coisas. | Os detetives usam.
+Termômetro | f | É um instrumento. | Mede a temperatura. | É colocado embaixo do braço. | Mostra se a pessoa está com febre.
+Bússola | m | É um instrumento. | Tem uma agulha. | A agulha aponta para o norte. | Ajuda a se orientar. | Bussola
+Vacina | f | É dada por injeção ou gotinha. | Previne doenças. | Tem uma caderneta própria. | O Zé Gotinha é seu mascote.
+Bactéria | m | É muito pequena. | Só se vê no microscópio. | Algumas causam doenças. | Algumas ajudam a fazer iogurte. | Bactérias
+Vírus | m | É minúsculo. | Causa gripe e resfriado. | Muitos cientistas nem o consideram um ser vivo. | Também é o nome de um programa malicioso de computador. | Virus
+Célula | m | É muito pequena. | É a menor unidade da vida. | Tem núcleo. | Forma todos os seres vivos. | Células
+Oxigênio | m | É um gás. | Não tem cor nem cheiro. | As plantas liberam. | A gente precisa dele para respirar. | Oxigenio
+Fotossíntese | m | Acontece nas plantas. | Precisa de luz. | Usa gás carbônico e água. | Produz oxigênio e alimento para a planta. | Fotossintese
+Constelação | m | Fica no céu. | É um grupo de estrelas. | Forma figuras imaginárias. | O Cruzeiro do Sul é uma delas. | Constelações
+Alienígena | f | Ninguém sabe se existe. | Viria de outro planeta. | Viaja em disco voador nos filmes. | Nos desenhos, costuma ser verde. | ET;Extraterrestre;Alien
+Big Bang | m | Aconteceu há bilhões de anos. | É uma teoria científica. | Explica o início do Universo. | Seria uma grande expansão.
+Tubo de ensaio | m | É de vidro. | É fino e comprido. | Fica num suporte. | É usado em experiências de laboratório.
+Asteroide | m | Fica no espaço. | É uma rocha. | Muitos ficam entre Marte e Júpiter. | Um deles pode ter extinguido os dinossauros. | Asteróide
+
+# escola | Escola | 🎒 | objeto
+Lápis | f | É material escolar. | Tem grafite. | Precisa apontar. | Escreve e pode ser apagado. | Lapis
+Caneta | f | É material escolar. | Tem tinta. | Pode ser azul, preta ou vermelha. | Escreve e não apaga fácil.
+Borracha | f | É material escolar. | É macia. | Deixa farelos no papel. | Apaga o lápis.
+Caderno | f | É material escolar. | Tem folhas pautadas. | Pode ser de espiral. | É onde a gente copia a matéria.
+Livro | f | Tem capa. | Tem muitas páginas. | Tem um autor. | Conta histórias ou ensina coisas.
+Régua | f | É material escolar. | É comprida e reta. | Tem números. | Mede e ajuda a traçar linhas retas. | Regua
+Estojo | f | É material escolar. | Tem zíper. | Fica dentro da mochila. | Guarda lápis e canetas.
+Apontador | f | É pequeno. | Tem uma lâmina. | Deixa raspas de madeira. | Faz a ponta do lápis.
+Cola | f | É material escolar. | Pode ser branca, em bastão ou colorida. | É grudenta. | Junta papéis.
+Lousa | f | Fica na parede da sala. | Pode ser verde, preta ou branca. | O professor escreve nela. | Usa giz ou pincel. | Quadro;Quadro-negro
+Giz | f | É branco ou colorido. | Suja as mãos de pó. | Também desenha amarelinha. | Escreve na lousa.
+Carteira escolar | f | É um móvel. | Fica em fileiras. | Tem cadeira e mesa juntas. | É onde o aluno senta na sala. | Carteira
+Recreio | f | É um intervalo. | Acontece no meio da aula. | Tem lanche e brincadeira. | O sinal avisa o começo e o fim. | Intervalo
+Lancheira | f | É levada para a escola. | Tem alça. | Pode ter desenho de personagem. | Guarda o lanche.
+Uniforme | f | É uma roupa. | Todos usam igual. | Tem o símbolo da escola. | Os alunos usam todos os dias.
+Prova | f | Dá frio na barriga. | Vale nota. | Tem perguntas. | Mostra o que o aluno aprendeu. | Exame;Avaliação
+Lição de casa | f | É passada pelo professor. | É feita em casa. | Tem prazo para entregar. | Também é chamada de dever de casa. | Dever de casa;Tarefa;Lição
+Boletim | f | É um documento. | Chega no fim do bimestre. | Os pais assinam. | Mostra as notas do aluno.
+Merenda | f | É servida na escola. | É gratuita nas escolas públicas. | É preparada por merendeiras. | É a comida do intervalo.
+Globo terrestre | m | É redondo. | Gira num suporte. | Mostra continentes e oceanos. | É um modelo da Terra. | Globo
+Mapa | f | É uma representação. | Tem legenda e escala. | Mostra países e cidades. | Ajuda a achar caminhos.
+Dicionário | f | É um livro grosso. | Está em ordem alfabética. | Tem muitas palavras. | Explica o significado das palavras. | Dicionario
+Compasso | m | É material escolar. | Tem uma ponta seca e um grafite. | Gira. | Desenha círculos.
+Transferidor | m | É material escolar. | Tem formato de meia-lua. | É transparente. | Mede ângulos.
+Lápis de cor | f | Vem numa caixinha. | É colorido. | Precisa apontar. | Serve para pintar desenhos. | Lápis colorido
+Giz de cera | f | É grosso. | É colorido. | É usado por crianças pequenas. | É feito de cera.
+Canetinha | f | É colorida. | Tem tinta. | Vem em estojos com várias cores. | Seca se ficar sem tampa. | Caneta hidrográfica;Hidrocor
+Agenda | f | Tem os dias do ano. | É usada para anotar compromissos. | Leva recados entre a escola e a família. | Tem datas.
+Fichário | m | Tem argolas. | As folhas são soltas. | Pode ter divisórias. | Substitui o caderno. | Fichario
+Sinal | f | Toca na escola. | É barulhento. | Avisa o início do recreio. | Marca a hora da saída. | Sirene
+Matemática | f | É uma matéria. | Tem contas. | Tem números e fórmulas. | Tem adição, subtração e multiplicação. | Matematica
+Português | f | É uma matéria. | Tem gramática. | Tem redação. | Ensina a ler e escrever bem. | Portugues;Língua portuguesa
+História | f | É uma matéria. | Estuda o passado. | Fala de reis, guerras e descobrimentos. | Fala da chegada dos portugueses ao Brasil. | Historia
+Geografia | f | É uma matéria. | Usa mapas. | Estuda relevo e clima. | Fala de países e capitais.
+Educação física | f | É uma matéria. | É na quadra. | Tem uniforme próprio. | Tem esportes e exercícios. | Educação fisica;Ed. física
+Ciências | f | É uma matéria. | Tem experiências. | Fala do corpo humano e da natureza. | Pode ter aula no laboratório. | Ciencias
+Artes | f | É uma matéria. | Usa tinta e papel. | Tem desenho, pintura e música. | Estuda pintores famosos. | Arte
+Chamada | f | Acontece no começo da aula. | O professor fala o nome de cada aluno. | O aluno responde “presente”. | Marca quem faltou.
+Formatura | m | É uma festa. | Marca o fim de uma etapa. | Tem beca e capelo. | Os alunos recebem o diploma.
+Excursão | m | É um passeio. | Sai com a turma. | Precisa de autorização dos pais. | Vai de ônibus para um museu ou parque. | Excursao;Passeio escolar
+
+# festas | Festas e datas | 🎉 | geral
+Natal | f | É comemorado em dezembro. | Tem árvore enfeitada e luzes. | Tem ceia e troca de presentes. | O Papai Noel aparece.
+Páscoa | f | Muda de data todo ano. | Fica entre março e abril. | Tem um coelho como símbolo. | Tem ovos de chocolate. | Pascoa
+Carnaval | f | Acontece em fevereiro ou março. | Tem blocos de rua e fantasias. | Tem desfile de escolas de samba. | É o feriado mais famoso do Brasil.
+Festa junina | f | Acontece em junho. | Tem quadrilha e roupa caipira. | Tem fogueira, pipoca e quentão. | Homenageia santos como São João. | São João;Arraiá
+Ano-Novo | f | É de 31 de dezembro para 1º de janeiro. | Muita gente veste branco. | Tem contagem regressiva. | Tem fogos de artifício à meia-noite. | Réveillon;Ano Novo;Virada
+Aniversário | f | Acontece uma vez por ano. | Tem bolo e velinhas. | Tem o “parabéns pra você”. | Comemora o dia em que alguém nasceu. | Aniversario
+Dia das Mães | f | É comemorado em maio. | É no segundo domingo do mês. | Tem almoço em família. | Homenageia as mães. | Dia das Maes
+Dia dos Pais | f | É comemorado em agosto no Brasil. | É no segundo domingo do mês. | Crianças fazem cartões na escola. | Homenageia os pais.
+Dia das Crianças | f | É em 12 de outubro. | É o mesmo dia de Nossa Senhora Aparecida. | Tem muitos brinquedos de presente. | Homenageia os pequenos. | Dia das Criancas
+Halloween | f | É em 31 de outubro. | É de origem estrangeira. | Tem abóboras e fantasias de monstros. | As crianças pedem “doces ou travessuras”. | Dia das Bruxas
+Casamento | f | É uma celebração. | A noiva costuma usar vestido branco. | Tem alianças. | Une um casal. | Matrimônio
+Batizado | m | É uma cerimônia religiosa. | Geralmente é feita com um bebê. | Tem padrinhos. | Usa água benta. | Batismo
+Dia dos Namorados | f | É em 12 de junho no Brasil. | Tem jantar romântico. | Tem flores e chocolates. | É para os casais.
+Chá de bebê | f | Acontece antes de o bebê nascer. | Os convidados levam fraldas. | Tem brincadeiras com a futura mãe. | Ajuda a montar o enxoval. | Cha de bebe;Chá de fraldas
+Chá revelação | m | Acontece durante a gravidez. | Tem azul e rosa. | Pode ter balão ou bolo com recheio colorido. | Revela se é menino ou menina. | Cha revelacao
+Dia da Independência | f | É em 7 de setembro. | Tem desfiles cívicos. | Lembra o grito às margens do Ipiranga. | Comemora a independência do Brasil. | Sete de Setembro;7 de Setembro
+Tiradentes | m | É em 21 de abril. | É feriado nacional. | Homenageia um herói da Inconfidência Mineira. | O homenageado também trabalhava como dentista. | Dia de Tiradentes
+Dia do Professor | f | É em 15 de outubro. | Os alunos levam presentes e cartões. | É dia de agradecer. | Homenageia quem ensina.
+Dia dos Povos Indígenas | m | É em 19 de abril. | Antes era chamado por outro nome. | As escolas fazem atividades sobre culturas indígenas. | Homenageia os povos originários do Brasil. | Dia do Índio
+Dia de Finados | m | É em 2 de novembro. | É feriado. | As pessoas visitam cemitérios. | Lembra quem já morreu. | Finados
+Proclamação da República | m | É em 15 de novembro. | É feriado nacional. | Marca o fim do Império no Brasil. | Aconteceu em 1889.
+Dia do Trabalho | m | É em 1º de maio. | É feriado. | Lembra lutas por direitos. | Homenageia os trabalhadores. | Dia do Trabalhador
+Oktoberfest | m | É uma festa de tradição alemã. | Acontece em outubro. | É famosa em Blumenau. | Tem chope e trajes típicos.
+Festa do Peão | m | É uma festa do interior. | Tem rodeio. | Tem shows sertanejos. | A mais famosa é a de Barretos. | Rodeio
+Festival de Parintins | m | Acontece no Amazonas. | Tem dois bois rivais, Garantido e Caprichoso. | Acontece em junho. | Opõe o vermelho ao azul. | Parintins;Boi-bumbá
+Dia dos Avós | m | É em 26 de julho. | É o dia de Sant’Ana e São Joaquim. | Tem visitas e abraços. | Homenageia os avós.
+Dia da Árvore | m | É em 21 de setembro. | Fica perto do começo da primavera. | As escolas plantam mudas. | Homenageia as árvores.
+Dia do Saci | m | É em 31 de outubro. | Foi criado para valorizar o folclore brasileiro. | Cai no mesmo dia de uma festa estrangeira de monstros. | Homenageia um personagem de uma perna só.
+Festa de 15 anos | f | É uma festa grande. | Tem valsa. | A aniversariante costuma usar um vestido de princesa. | Marca a passagem da menina para moça. | Debutante;Quinze anos
+Amigo secreto | f | Acontece no fim do ano. | Cada um sorteia um nome. | Ninguém pode contar quem tirou. | Todo mundo troca presentes. | Amigo oculto
+Quermesse | m | É uma festa ligada à igreja. | Tem barraquinhas. | Tem pescaria e bingo. | Arrecada dinheiro para a paróquia.
+Chá de panela | m | Acontece antes do casamento. | É para a noiva. | Os convidados levam utensílios de cozinha. | Ajuda a montar a casa nova. | Chá de cozinha
+Dia da Consciência Negra | m | É em 20 de novembro. | Lembra Zumbi dos Palmares. | Celebra a cultura afro-brasileira. | Virou feriado nacional. | Consciência Negra
+Dia Internacional da Mulher | m | É em 8 de março. | Lembra a luta por direitos iguais. | Muitos dão flores. | Homenageia as mulheres. | Dia da Mulher
+Dia da Mentira | f | É em 1º de abril. | É dia de pegadinhas. | Ninguém acredita em nada. | É dia de enganar os amigos. | Primeiro de abril;1º de abril
+Sexta-feira 13 | f | Acontece algumas vezes por ano. | É considerada dia de azar. | Tem gato preto e superstições. | Junta um dia da semana com um número. | Sexta feira 13
+Dia do Amigo | m | É em 20 de julho. | Tem mensagens nas redes sociais. | Celebra a amizade. | Homenageia os amigos.
+Lua de mel | f | Acontece depois do casamento. | É uma viagem. | Só vão os dois. | É a viagem dos recém-casados. | Lua-de-mel
+Bodas de ouro | m | É uma comemoração de casal. | Marca muitos anos juntos. | Os avós costumam comemorar. | Celebra 50 anos de casamento.
+Corpus Christi | m | É uma data religiosa. | Muda de data todo ano. | Ruas são enfeitadas com tapetes coloridos. | Cai numa quinta-feira.
