@@ -1,0 +1,209 @@
+# casa | Objetos da casa | 🏠 | objeto
+Guarda-chuva | f | Pode ser aberto e fechado. | Tem um cabo e varetas. | A gente leva quando o céu está nublado. | Protege da chuva. | Guarda chuva;Sombrinha
+Geladeira | f | É um eletrodoméstico grande. | Fica na cozinha. | Muita gente enfeita a porta dela com ímãs. | Mantém a comida gelada. | Refrigerador
+Escova de dentes | f | É pequena e tem cabo comprido. | Fica no banheiro. | Tem cerdas. | Usamos com pasta depois de comer.
+Cadeira | f | É um móvel. | Costuma ter quatro pernas. | Tem encosto. | Serve para sentar.
+Relógio | f | Pode ficar na parede ou no pulso. | Faz tique-taque. | Tem ponteiros ou números. | Mostra as horas.
+Tesoura | f | É uma ferramenta de metal. | Tem dois buracos para os dedos. | Tem duas lâminas. | Serve para cortar papel e tecido.
+Travesseiro | f | É macio e fofo. | Usa fronha. | Fica em cima da cama. | Apoia a cabeça para dormir.
+Vela | f | É feita de cera. | Derrete aos poucos. | Tem um pavio. | A gente acende quando falta luz ou no bolo de aniversário.
+Chave | f | É pequena e de metal. | Tem dentes, mas não morde. | Fica pendurada num chaveiro. | Abre portas e cadeados.
+Fogão | f | É um eletrodoméstico grande. | Fica na cozinha. | Tem bocas e um forno. | Usa gás para cozinhar.
+Micro-ondas | f | É um eletrodoméstico. | Esquenta comida bem rápido. | Tem um prato que gira lá dentro. | Apita quando termina. | Microondas
+Liquidificador | f | É um eletrodoméstico de cozinha. | Faz bastante barulho. | Tem um copo com lâminas no fundo. | Serve para fazer sucos e vitaminas.
+Ventilador | f | É um aparelho elétrico. | É muito usado no verão. | Tem hélices que giram. | Faz vento para refrescar.
+Televisão | f | É um aparelho eletrônico. | Fica na sala. | Tem controle remoto. | Passa novelas, filmes e jogos. | TV;Televisor
+Sofá | f | É um móvel grande e macio. | Fica na sala. | Cabem várias pessoas sentadas. | É onde a família assiste à TV.
+Cama | f | É um móvel. | Fica no quarto. | Tem colchão e lençol. | É onde a gente dorme.
+Mesa | f | É um móvel. | Tem um tampo e pernas. | A família se reúne em volta dela. | É onde a gente faz as refeições.
+Espelho | f | É feito de vidro. | Fica no banheiro ou no guarda-roupa. | Mostra tudo invertido. | Reflete a nossa imagem.
+Toalha | f | É de tecido felpudo. | Fica pendurada no banheiro. | Também vai para a praia. | Serve para secar o corpo.
+Sabonete | f | Fica no banheiro. | Faz espuma. | Tem cheirinho. | Serve para lavar o corpo e as mãos.
+Vassoura | f | É um utensílio de limpeza. | Tem um cabo comprido. | Tem cerdas na ponta. | As bruxas voam nela.
+Balde | f | É um recipiente. | Tem uma alça. | É usado na limpeza da casa. | Carrega água.
+Panela | f | É um utensílio de cozinha. | Vai ao fogo. | Tem cabo e tampa. | É onde a comida é cozida.
+Garfo | f | É um talher. | É de metal. | Tem dentes. | Espeta a comida.
+Colher | f | É um talher. | É de metal. | Tem uma parte côncava. | Serve para tomar sopa.
+Faca | f | É um talher. | Precisa de cuidado. | Tem lâmina. | Serve para cortar a comida.
+Copo | f | É um recipiente. | Pode ser de vidro ou plástico. | Fica no armário da cozinha. | Serve para beber.
+Prato | f | É uma louça. | É redondo. | Pode ser raso ou fundo. | É onde a comida é servida.
+Lâmpada | f | É de vidro. | Fica no teto. | Queima de vez em quando. | Ilumina a casa.
+Máquina de lavar | f | É um eletrodoméstico grande. | Fica na lavanderia. | Gira e centrifuga. | Lava as roupas. | Lava-roupas;Máquina de lavar roupa
+Ferro de passar | f | É um aparelho elétrico. | Esquenta muito. | Tem uma base lisa de metal. | Tira os amassados da roupa. | Ferro
+Cobertor | f | É feito de tecido grosso. | Fica na cama. | É usado no inverno. | Esquenta quando a gente dorme. | Coberta;Edredom
+Tapete | f | É feito de tecido ou fibra. | Fica no chão. | Pode ser felpudo. | Em algumas histórias, voa.
+Cortina | f | É feita de tecido. | Fica pendurada num trilho. | Abre e fecha. | Tapa a luz da janela.
+Janela | f | Fica na parede. | Tem vidro. | Abre e fecha. | Deixa entrar luz e vento.
+Porta | f | É a entrada de um cômodo. | Tem maçaneta. | Pode ter fechadura. | A gente abre e fecha para passar.
+Escada | f | Tem degraus. | Pode ser fixa ou portátil. | Serve para subir e descer. | Liga um andar ao outro.
+Pente | f | É pequeno e de plástico. | Tem dentes. | Fica no banheiro. | Serve para arrumar o cabelo.
+Secador de cabelo | f | É um aparelho elétrico. | Faz barulho. | Sopra ar quente. | Seca o cabelo. | Secador
+Varal | f | Fica no quintal ou na lavanderia. | Tem fios esticados. | Usa prendedores. | É onde as roupas secam.
+
+# brinquedos | Brinquedos e brincadeiras | 🧸 | objeto
+Bola | f | É redonda. | Quica no chão. | Pode ser chutada ou arremessada. | É usada no futebol e no vôlei.
+Boneca | f | É um brinquedo. | Tem cabelo e roupinhas. | As crianças trocam a roupa e dão nome. | Tem forma de pessoa ou bebê.
+Pipa | f | É feita de papel de seda e varetas. | Tem uma rabiola. | Precisa de vento. | Voa presa a uma linha. | Papagaio;Pandorga
+Ioiô | f | É um brinquedo pequeno e redondo. | Tem um cordão enrolado. | Dá para fazer manobras. | Sobe e desce preso no dedo. | Ioio
+Pião | m | É um brinquedo antigo. | Tem uma ponta de metal. | É lançado com uma fieira. | Fica girando no chão.
+Bolinha de gude | m | São pequenas e de vidro. | Têm desenhos coloridos dentro. | Joga-se no chão, mirando com o dedo. | O objetivo é acertar as bolinhas dos outros. | Gude;Bolinha
+Peteca | m | É um brinquedo de origem indígena. | Tem penas. | É jogada com a palma da mão. | Não pode cair no chão.
+Quebra-cabeça | f | Tem muitas peças. | As peças se encaixam. | Forma uma imagem quando completo. | Exige paciência para montar. | Quebra cabeça
+Dominó | f | É um jogo de peças retangulares. | Cada peça tem duas metades com pontinhos. | As peças são encaixadas pelos números iguais. | Enfileiradas em pé, caem uma atrás da outra.
+Xadrez | f | É um jogo de tabuleiro. | O tabuleiro é quadriculado. | Tem rei, rainha, torres e cavalos. | O objetivo é dar xeque-mate.
+Dama | m | É um jogo de tabuleiro. | Usa o mesmo tabuleiro do xadrez. | As peças são redondas e andam na diagonal. | A peça que chega ao outro lado vira uma peça mais forte. | Damas
+Baralho | f | Tem 52 cartas. | Tem quatro naipes. | Tem ás, rei, dama e valete. | Serve para jogar truco e buraco.
+Dado | f | É um cubo pequeno. | Tem seis faces. | Tem pontinhos de 1 a 6. | É jogado para ver quantas casas andar.
+Videogame | f | É eletrônico. | Liga na televisão. | Usa controle com botões. | Serve para jogar jogos eletrônicos. | Video game;Console
+Carrinho | f | É um brinquedo pequeno. | Tem rodinhas. | Pode ser de corrida ou de controle remoto. | É uma miniatura de veículo.
+Ursinho de pelúcia | f | É macio e fofinho. | As crianças dormem abraçadas com ele. | É recheado de espuma. | Tem forma de um animal grande e peludo. | Ursinho;Pelúcia
+Bambolê | f | É um aro de plástico. | É colorido. | Gira em volta da cintura. | Precisa rebolar para não cair.
+Pula-corda | f | É uma corda com dois cabos. | Pode ser individual ou com amigos batendo. | Exige ritmo. | A gente pula enquanto ela gira. | Pular corda;Corda
+Balanço | f | Fica no parquinho. | Tem um assento pendurado. | Vai para a frente e para trás. | É preso por correntes ou cordas.
+Escorregador | f | Fica no parquinho. | Tem uma escada. | Tem uma rampa lisa. | A gente desce sentado. | Escorrega;Tobogã
+Gangorra | f | Fica no parquinho. | Precisa de duas pessoas. | É uma tábua apoiada no meio. | Um sobe enquanto o outro desce.
+Patinete | f | Tem duas ou três rodinhas. | Tem um guidão alto. | A gente impulsiona com um pé. | Tem uma base estreita para ficar em pé.
+Skate | f | É uma prancha. | Tem quatro rodinhas. | Dá para fazer manobras em pistas. | A gente anda em pé sobre ele.
+Patins | f | São calçados. | Têm rodinhas embaixo. | Exigem equilíbrio. | Deslizam pelo chão.
+Lego | f | São pecinhas de plástico. | São coloridas. | Encaixam umas nas outras. | Servem para construir o que quiser. | Blocos de montar
+Massinha de modelar | f | É mole e colorida. | Tem um cheirinho característico. | Dá para fazer bonequinhos. | A gente modela com as mãos. | Massinha
+Cubo mágico | m | É um cubo colorido. | Tem seis cores. | Gira em várias partes. | O desafio é deixar cada face de uma cor só.
+Bolha de sabão | f | É feita com água e sabão. | É soprada por um aro. | É transparente e brilha com as cores do arco-íris. | Estoura quando toca em algo. | Bolinha de sabão
+Esconde-esconde | f | É uma brincadeira de grupo. | Uma pessoa conta de olhos fechados. | Os outros procuram um lugar para ficar. | Quem conta tem que achar todo mundo. | Esconde esconde
+Pega-pega | f | É uma brincadeira de correr. | Tem um pegador. | Quem é tocado vira o pegador. | Tem um “pique” onde ninguém pode ser pego. | Pega pega
+Amarelinha | f | É desenhada no chão com giz. | Tem casas numeradas. | Joga-se uma pedrinha. | A gente pula num pé só.
+Batata quente | m | É uma brincadeira de roda. | Passa-se um objeto de mão em mão. | Alguém canta ou conta de olhos fechados. | Quem estiver com o objeto no fim sai.
+Jogo da velha | f | É jogado no papel. | Tem uma grade de 3 por 3. | Um jogador usa X e o outro O. | Vence quem faz três em linha.
+Forca | m | É jogado no papel. | Um jogador pensa numa palavra. | O outro chuta letras. | A cada erro, desenha-se uma parte de um boneco.
+Estátua | m | É uma brincadeira com música. | Quando a música para, todo mundo para. | Não pode se mexer nem rir. | Quem se mexe sai.
+Telefone sem fio | m | É uma brincadeira em fila ou roda. | Uma frase é passada no ouvido. | No fim, a frase chega toda diferente. | Ninguém pode repetir em voz alta.
+Cabo de guerra | m | É uma brincadeira de força. | Tem dois times. | Cada time puxa de um lado. | Usa uma corda grossa.
+Bingo | m | É um jogo de sorte. | Cada um tem uma cartela com números. | Alguém sorteia e canta os números. | Ganha quem completar a cartela primeiro.
+Banco Imobiliário | m | É um jogo de tabuleiro. | Usa dinheiro de papel. | Os jogadores compram propriedades. | O objetivo é não ir à falência.
+Uno | f | É um jogo de cartas. | As cartas têm quatro cores e números. | Tem cartas de “+2” e “+4”. | Quem tem uma carta só precisa gritar o nome do jogo.
+
+# roupas | Roupas e acessórios | 👕 | objeto
+Óculos | f | São usados no rosto. | Têm hastes que apoiam nas orelhas. | Têm duas lentes. | Ajudam a enxergar melhor.
+Camiseta | f | É uma peça de roupa. | Cobre a parte de cima do corpo. | Tem manga curta. | Pode ter estampa e vai por cima da cabeça. | Camisa;Blusa
+Calça jeans | f | É uma peça de roupa. | Cobre as pernas inteiras. | É de um tecido grosso e azul. | Tem bolsos e é a calça mais usada do mundo. | Calça;Jeans
+Bermuda | f | Cobre as pernas até o joelho. | É usada no calor. | É mais curta que a calça. | É comum para meninos e homens no verão. | Short;Shorts
+Saia | f | É uma peça de roupa. | É presa na cintura. | Não tem divisão entre as pernas. | Pode ser curta, midi ou longa.
+Vestido | f | É uma peça única. | Cobre o tronco e as pernas. | É muito usado em festas. | É usado pelas noivas no casamento.
+Meia | f | É de tecido macio. | Vem em pares. | Vai por baixo do sapato. | Cobre os pés. | Meias
+Tênis | f | É um calçado. | Tem cadarço. | Tem sola de borracha. | É usado para correr e fazer esporte.
+Chinelo | f | É um calçado aberto. | É de borracha. | Tem uma tira que passa entre os dedos. | É usado em casa e na praia. | Chinelos
+Sandália | f | É um calçado aberto. | Tem tiras. | Deixa os dedos à mostra. | É usada no calor. | Rasteirinha
+Bota | f | É um calçado. | Cobre o pé e parte da perna. | É usada no frio ou na chuva. | Faz parte do traje do caubói. | Botas
+Boné | f | Vai na cabeça. | Tem uma aba na frente. | Protege do sol. | Muitos têm o escudo de um time.
+Chapéu | f | Vai na cabeça. | Tem aba em volta toda. | Pode ser de palha. | É usado na festa junina e por caubóis.
+Cachecol | f | É de lã ou tecido. | É comprido. | É usado no frio. | Fica enrolado no pescoço.
+Luva | f | Vem em pares. | Tem dedos. | Protege do frio ou da sujeira. | Vai nas mãos. | Luvas
+Casaco | f | É uma peça de roupa grossa. | Tem mangas compridas. | Vai por cima das outras roupas. | É usado no frio. | Jaqueta;Agasalho
+Pijama | f | É uma roupa confortável. | Pode ter estampa divertida. | Costuma ser um conjunto de blusa e calça. | É usado para dormir.
+Biquíni | f | É uma roupa de banho. | Tem duas peças. | É usado na praia e na piscina. | É usado por mulheres. | Biquini
+Sunga | f | É uma roupa de banho. | É pequena e justa. | É usada na praia e na piscina. | É usada por homens.
+Gravata | m | É um acessório. | É de tecido. | Tem um nó. | Fica no pescoço, com a camisa social.
+Cinto | f | É um acessório. | Tem uma fivela. | Passa pelos passantes da calça. | Segura a calça na cintura.
+Anel | f | É uma joia. | É pequeno e redondo. | Pode ter uma pedra. | Vai no dedo. | Aliança
+Colar | f | É um acessório. | Pode ter pingente. | É feito de corrente ou contas. | Vai no pescoço. | Corrente
+Brinco | f | É uma joia. | Vem em par. | Pode ser de argola. | Vai na orelha. | Brincos
+Pulseira | f | É um acessório. | Pode ter pingentes. | É feita de contas, couro ou metal. | Vai no pulso.
+Bolsa | f | É um acessório. | Tem alça. | Guarda carteira, chave e celular. | Muitas mulheres carregam no ombro.
+Mochila | f | Tem alças. | É levada nas costas. | Tem zíper e bolsos. | As crianças levam para a escola.
+Carteira | f | É pequena. | Fica no bolso ou na bolsa. | Tem divisórias. | Guarda dinheiro e documentos.
+Avental | m | É de tecido. | É amarrado na cintura ou no pescoço. | Protege a roupa. | É usado para cozinhar.
+Capa de chuva | m | É impermeável. | Tem capuz. | É de plástico. | É usada em dias de chuva.
+Moletom | f | É uma blusa de tecido grosso e macio. | Pode ter capuz. | Tem um bolso na frente, tipo canguru. | É usado em dias frios. | Blusa de moletom
+Terno | m | É uma roupa social. | Tem paletó e calça do mesmo tecido. | É usado com camisa e gravata. | É usado em casamentos e no trabalho formal.
+Touca | m | Vai na cabeça. | É de lã. | É usada no frio. | Cobre as orelhas. | Gorro
+Tiara | m | É um acessório. | É usada no cabelo. | Tem formato de arco. | Segura o cabelo para trás.
+Fantasia | f | É uma roupa especial. | É usada no Carnaval e no Halloween. | Faz a pessoa parecer outra coisa. | Pode ser de super-herói ou princesa.
+Coroa | f | Vai na cabeça. | É dourada. | Pode ter pedras preciosas. | É usada por reis e rainhas.
+Maiô | m | É uma roupa de banho. | É de uma peça só. | É usado por mulheres. | É usado na natação.
+Lenço | m | É um pano pequeno. | Pode ser de seda ou algodão. | Antigamente era usado para assoar o nariz. | Também é usado amarrado no pescoço ou na cabeça.
+Galocha | m | É um calçado de borracha. | É alto. | É impermeável. | É usado para pisar em poças e lama. | Galochas
+Suspensório | m | É um acessório. | Tem duas tiras. | Passa por cima dos ombros. | Segura a calça no lugar do cinto. | Suspensórios
+
+# profissoes | Profissões | 👩‍🚒 | pessoa
+Médico | f | Estudou muitos anos na faculdade. | Trabalha em hospitais e consultórios. | Usa jaleco branco e estetoscópio. | Cuida da saúde das pessoas. | Médica;Doutor
+Professor | f | Corrige provas e lições. | Escreve na lousa. | Trabalha com alunos. | Ensina na escola. | Professora
+Bombeiro | f | Faz resgates e salvamentos. | Usa capacete e roupa especial. | Anda num caminhão vermelho com sirene. | Apaga incêndios. | Bombeira
+Cozinheiro | f | Trabalha com facas e panelas. | Trabalha em restaurantes. | Usa avental e às vezes um chapéu alto. | Prepara comida. | Cozinheira;Chef;Chefe de cozinha
+Astronauta | f | Passa por treinamentos muito difíceis. | Flutua quando está trabalhando. | Usa traje especial com capacete. | Viaja para o espaço em foguetes.
+Policial | f | Usa uniforme e distintivo. | Anda de viatura com sirene. | Faz patrulhas pela cidade. | Combate o crime. | Polícia
+Dentista | f | Trabalha num consultório. | Usa uma cadeira que deita o paciente. | Usa broca e espelhinho. | Cuida dos dentes.
+Jogador de futebol | f | Treina todos os dias. | Usa chuteira. | Joga em estádios. | Tenta fazer gols. | Jogador;Futebolista
+Piloto de avião | f | Usa uniforme com quepe. | Trabalha em aeroportos. | Conversa com a torre de controle. | Comanda um avião. | Piloto
+Veterinário | f | Estudou medicina na faculdade. | Trabalha numa clínica ou numa fazenda. | Aplica vacinas. | Cuida da saúde dos animais. | Veterinária
+Pintor | f | Trabalha com tintas. | Usa pincel e rolo. | Às vezes sobe em escadas. | Pinta paredes ou quadros. | Pintora
+Carteiro | f | Trabalha andando pelas ruas. | Usa uniforme amarelo e azul. | Trabalha nos Correios. | Entrega cartas e encomendas.
+Enfermeiro | f | Trabalha na área da saúde. | Trabalha em hospitais e postos. | Aplica injeções e faz curativos. | Cuida dos pacientes junto com os médicos. | Enfermeira
+Advogado | m | Estudou Direito. | Usa terno no trabalho. | Defende pessoas e empresas. | Trabalha em tribunais e escritórios. | Advogada
+Juiz | m | Estudou Direito. | Usa uma toga preta. | Bate o martelo. | Decide quem tem razão nos processos. | Juíza
+Engenheiro | m | Estudou muita matemática. | Usa capacete na obra. | Faz cálculos e projetos. | Planeja pontes, prédios e máquinas. | Engenheira
+Arquiteto | m | Estudou numa faculdade. | Faz plantas e maquetes. | Pensa na beleza e no conforto dos espaços. | Desenha casas e prédios. | Arquiteta
+Pedreiro | f | Trabalha em obras. | Usa cimento e areia. | Usa prumo, nível e uma colher triangular. | Levanta paredes de tijolos.
+Eletricista | f | Trabalha com fios. | Usa alicate e fita isolante. | Precisa ter cuidado para não levar choque. | Conserta a instalação elétrica.
+Encanador | f | Trabalha com canos. | Usa chave inglesa. | Resolve vazamentos. | Conserta torneiras e privadas entupidas. | Bombeiro hidráulico
+Mecânico | f | Trabalha numa oficina. | Fica com as mãos sujas de graxa. | Usa macacão e chaves. | Conserta carros. | Mecânica
+Motorista de ônibus | f | Trabalha dirigindo. | Passa o dia rodando pela cidade. | Para nos pontos. | Leva muitos passageiros. | Motorista
+Garçom | f | Trabalha em restaurantes. | Anota pedidos. | Carrega bandejas. | Serve as mesas. | Garçonete
+Padeiro | f | Acorda muito cedo. | Trabalha com farinha e fermento. | Usa um forno grande. | Faz pães. | Padeira
+Cabeleireiro | f | Trabalha num salão. | Usa tesoura, pente e secador. | Pode pintar e fazer escova. | Corta cabelos. | Cabeleireira
+Jardineiro | f | Trabalha ao ar livre. | Usa tesoura de poda e regador. | Corta a grama. | Cuida de plantas e jardins. | Jardineira
+Agricultor | f | Trabalha no campo. | Usa enxada e trator. | Depende da chuva. | Planta e colhe alimentos. | Fazendeiro;Lavrador
+Pescador | f | Trabalha na água. | Acorda antes de o sol nascer. | Usa barco, rede e vara. | Pesca peixes.
+Jornalista | m | Trabalha com informação. | Faz entrevistas. | Escreve matérias ou aparece na TV. | Conta as notícias. | Repórter
+Fotógrafo | f | Trabalha com imagens. | Usa lentes e flash. | Trabalha em casamentos e eventos. | Tira fotos. | Fotógrafa
+Cantor | f | Trabalha com música. | Faz shows. | Usa microfone. | Usa a voz para trabalhar. | Cantora
+Ator | f | Trabalha com arte. | Decora textos. | Trabalha em novelas, filmes e teatro. | Interpreta personagens. | Atriz
+Palhaço | f | Trabalha no circo. | Usa nariz vermelho. | Usa sapatos enormes e maquiagem colorida. | Faz as pessoas rirem.
+Mágico | f | Trabalha com shows. | Usa cartola e varinha. | Faz truques com cartas. | Tira um coelho da cartola.
+Cientista | f | Trabalha num laboratório. | Usa jaleco e óculos de proteção. | Faz experiências. | Descobre coisas novas.
+Programador | m | Trabalha no computador o dia todo. | Escreve em linguagens especiais. | Corrige “bugs”. | Cria aplicativos e sites. | Programadora
+Salva-vidas | m | Trabalha na praia ou na piscina. | Fica numa cadeira alta ou num posto. | Usa apito e boia. | Resgata quem está se afogando. | Guarda-vidas
+Faxineiro | f | Trabalha com limpeza. | Usa vassoura, rodo e pano. | Usa produtos de limpeza. | Deixa tudo limpinho. | Faxineira
+Costureira | f | Trabalha com tecidos. | Usa agulha, linha e fita métrica. | Usa uma máquina com pedal. | Faz e conserta roupas. | Costureiro
+Detetive | m | Investiga mistérios. | Nos filmes, usa uma lupa. | Procura pistas. | Descobre quem é o culpado.
+
+# lugares | Lugares | 🏖️ | lugar
+Praia | f | Fica ao ar livre. | Tem guarda-sol e cadeiras. | Fica lotada no verão. | Tem areia e mar.
+Escola | f | Tem um sinal que toca. | Tem salas, carteiras e lousa. | Tem recreio. | É onde as crianças estudam. | Colégio
+Hospital | f | Funciona 24 horas. | Tem enfermeiros e macas. | Recebe ambulâncias. | Cuida de pessoas doentes.
+Cinema | f | É escuro lá dentro. | Tem poltronas viradas para o mesmo lado. | Vende pipoca. | Passa filmes numa tela gigante.
+Supermercado | f | Tem corredores e prateleiras. | Tem carrinhos e cestinhas. | Tem caixas para pagar. | Vende comida e produtos de casa. | Mercado
+Fazenda | f | Fica no campo, longe da cidade. | Tem plantações e trator. | Tem curral e celeiro. | Tem vacas, cavalos e galinhas. | Sítio
+Aeroporto | f | Tem esteiras de bagagem. | Precisa mostrar documento para embarcar. | Tem pista e torre de controle. | Aviões pousam e decolam.
+Biblioteca | f | É um lugar silencioso. | Dá para pegar coisas emprestadas. | Tem mesas para estudar. | Tem estantes cheias de livros.
+Zoológico | f | É um passeio para a família. | Tem recintos e cercados. | Tem tratadores. | Tem animais de vários países. | Zoo
+Igreja | f | Pode ter uma torre com sino. | Tem bancos enfileirados. | Recebe casamentos e batizados. | É um lugar de oração e missa.
+Padaria | f | Abre bem cedo. | Tem cheirinho de forno. | Tem balcão com doces e salgados. | Vende pão francês.
+Parque de diversões | f | Tem filas e ingressos. | Tem luzes coloridas e barulho. | Tem roda-gigante. | Tem montanha-russa.
+Museu | f | É um lugar de cultura. | Não pode tocar em nada. | Tem obras de arte e objetos antigos. | Tem exposições e guias.
+Teatro | f | Tem um palco. | Tem cortinas que abrem. | Tem poltronas e camarotes. | Apresenta peças e espetáculos.
+Estádio | f | É enorme. | Tem arquibancadas. | Recebe torcidas. | É onde acontecem jogos de futebol.
+Shopping | f | É um prédio grande. | Tem ar-condicionado. | Tem escadas rolantes e praça de alimentação. | Tem muitas lojas. | Shopping center
+Farmácia | f | Tem balcão e prateleiras. | Tem um farmacêutico. | Vende produtos de higiene. | Vende remédios. | Drogaria
+Banco | f | Tem caixas eletrônicos. | Tem porta giratória. | Tem gerente. | Guarda o dinheiro das pessoas. | Agência bancária
+Restaurante | f | Tem mesas e cadeiras. | Tem cardápio. | Tem garçons. | É onde a gente come fora de casa.
+Hotel | f | Tem recepção. | Tem quartos numerados. | Recebe turistas. | É onde a gente se hospeda em viagens. | Pousada
+Parque | f | É ao ar livre. | Tem árvores e grama. | É bom para caminhar e fazer piquenique. | É uma grande área verde na cidade.
+Praça | f | É um espaço público. | Tem bancos. | Pode ter coreto e chafariz. | Fica no centro do bairro ou da cidade.
+Piscina | f | Tem água. | Tem cloro. | Pode ter trampolim. | É onde a gente nada.
+Academia | f | Tem espelhos. | Tem aparelhos e pesos. | Tem instrutores. | É onde as pessoas fazem musculação.
+Delegacia | m | Tem policiais. | Tem viaturas na porta. | Tem celas. | É onde se registra um boletim de ocorrência.
+Correios | m | É uma empresa pública. | Tem balcão de atendimento. | Vende selos e caixas. | Envia cartas e encomendas. | Agência dos Correios
+Rodoviária | m | Tem plataformas. | Tem guichês de passagens. | Tem gente com malas. | É de onde saem os ônibus de viagem.
+Posto de gasolina | f | Fica na beira das ruas e estradas. | Tem frentistas. | Tem bombas. | É onde se abastece o carro. | Posto
+Feira livre | f | Acontece na rua. | Tem barracas. | Vende frutas, verduras e pastel. | Tem feirantes gritando ofertas. | Feira
+Cemitério | m | É um lugar silencioso. | Tem flores e cruzes. | É visitado no Dia de Finados. | Tem túmulos.
+Castelo | f | É uma construção antiga. | Tem torres e muralhas. | Pode ter fosso e ponte levadiça. | É onde moram reis e princesas nas histórias.
+Ilha | f | É um pedaço de terra. | Muitas vezes só se chega de barco ou avião. | Pode ter praias. | É cercada de água por todos os lados.
+Floresta | f | Tem muitas árvores. | Tem muitos animais. | É fresca e sombreada. | A Amazônia é a maior delas. | Mata;Selva
+Montanha | f | É muito alta. | Pode ter neve no topo. | É boa para escalar. | É uma grande elevação de terra e pedra. | Morro;Serra
+Deserto | f | É muito seco. | Faz calor de dia e frio à noite. | Tem dunas. | Tem areia e camelos.
+Cachoeira | f | Fica na natureza. | Tem pedras. | Faz barulho. | É uma queda d’água. | Cascata
+Caverna | m | É escura. | Fica dentro de montanhas ou debaixo da terra. | Pode ter morcegos. | Tem estalactites. | Gruta
+Circo | f | Tem uma lona. | Tem picadeiro. | Tem trapezistas e malabaristas. | Tem palhaços.
+Prisão | m | Tem grades. | Tem guardas. | Tem celas. | É onde ficam os presos. | Cadeia;Presídio
+Farol | m | Fica na beira do mar. | É uma torre alta. | Tem uma luz que gira. | Orienta os navios à noite.
