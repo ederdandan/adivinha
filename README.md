@@ -28,14 +28,14 @@ Jogo de dedução para família e amigos, jogado no navegador do celular. Cada j
 | **Item secreto** | Cada jogador recebe um item sorteado. A categoria do item é visível para todos. No modo "Tudo misturado", cada jogador recebe uma categoria diferente. |
 | **Na sua vez** | Escolha **uma** ação: ❓ **Perguntar**, 💡 **Pedir dica** ou 🎯 **Palpite**. |
 | **Perguntar** | Busque uma das 800 perguntas prontas, toque numa sugestão ou escreva a sua. O dono do item responde **Sim**, **Não** ou **Não sei**. |
-| **Pedir dica** | O dono do item **escreve uma dica** para todos verem (sem usar o nome do item) ou escolhe uma das dicas prontas. Cada jogador pode pedir **2 dicas** por partida. |
+| **Pedir dica** | O dono do item **escreve uma dica** para todos verem (sem usar o nome do item) ou toca numa das 3 dicas prontas oferecidas, que nunca entregam demais (as mais vagas do item e pistas sobre o nome, como número de letras). Cada jogador pode pedir **2 dicas** por partida. |
 | **Palpite** | Pequenos erros de digitação e plural valem automaticamente. Se a escrita for diferente (sinônimo, outro nome), o **dono do item confere** e diz se acertou. |
 | **Palpite certo** | Você ganha **1 ponto**, e o item do oponente é revelado. |
 | **Palpite errado** | **Dica Forçada**: você tem que dar uma dica sobre o *seu* item para todos. |
 | **Avisos** | Toque no 🔊 no topo para escolher som, vibração ou silêncio, e quais avisos quer receber. |
 | **Espectador Ativo** | Quem teve o item descoberto continua jogando: pergunta, usa dicas e dá palpites. |
 | **Fim de jogo** | Quando restam **2 itens** sem descobrir (com 2 jogadores, quando resta 1). Vence quem tiver mais pontos. |
-| **Histórico** | Todas as perguntas, respostas, dicas e palpites ficam visíveis para todos. |
+| **Histórico** | Todas as perguntas, respostas, dicas e palpites ficam visíveis para todos. Toque no nome de um jogador para ver só o que se sabe sobre o item dele. |
 
 ---
 
