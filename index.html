@@ -128,10 +128,99 @@ details.rules summary{cursor:pointer;font-weight:800;font-family:"Baloo 2",sans-
 details.rules ul{padding-left:20px;margin:10px 0 0} details.rules li{margin:4px 0}
 #toast{position:fixed;left:50%;bottom:calc(20px + env(safe-area-inset-bottom));transform:translateX(-50%) translateY(20px);background:var(--ink);color:var(--bg);padding:12px 18px;border-radius:14px;font-weight:700;max-width:calc(100% - 32px);opacity:0;pointer-events:none;transition:.25s;z-index:10;text-align:center}
 #toast.show{opacity:1;transform:translateX(-50%) translateY(0)}
+/* topo compacto */
+.topbar .row{flex-wrap:nowrap;gap:6px}
+.topbar .btn.sm{min-height:36px;padding:4px 10px}
+/* placar fixo: quem joga pulsa, barra de tempo (só visual) */
+.board{position:sticky;top:0;z-index:5;margin:0 -16px;padding:8px 16px 10px;background:var(--bg)}
+.board .seats{display:flex;gap:6px;background:var(--card);border:1px solid var(--line);border-radius:18px;padding:8px;box-shadow:var(--shadow)}
+.seat{flex:1;min-width:0;display:flex;flex-direction:column;align-items:center;gap:3px;opacity:.55;transition:opacity .2s}
+.seat.on{opacity:1}
+.seat .av{width:40px;height:40px}
+.seat.on .av{box-shadow:0 0 0 3px var(--card),0 0 0 6px var(--pc);animation:bob 1.2s ease-in-out infinite}
+.seat.out .av{filter:grayscale(1)}
+.seat .nm{font-size:.78rem;font-weight:800;max-width:100%;overflow:hidden;text-overflow:ellipsis;white-space:nowrap}
+.seat .pt{font-size:.75rem;font-weight:800;color:var(--muted)}
+.seat.off .nm{color:var(--no)}
+.timer{height:6px;border-radius:6px;background:var(--soft);overflow:hidden;margin-top:8px}
+.timer i{display:block;height:100%;background:var(--pc);border-radius:6px;animation:drain 60s linear forwards}
+.tstat{display:flex;justify-content:space-between;font-size:.85rem;font-weight:800;margin-top:4px}
+.tstat span:last-child{color:var(--muted);font-variant-numeric:tabular-nums}
+@keyframes bob{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+@keyframes drain{from{width:100%}to{width:0}}
+/* ações em cartões grandes */
+.acts{display:grid;grid-template-columns:repeat(3,1fr);gap:8px;margin-bottom:14px}
+.act{font:inherit;border:2px solid transparent;border-radius:16px;padding:12px 4px 10px;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:2px;
+  background:color-mix(in srgb,var(--ac) 14%,var(--card));color:var(--ink);transition:transform .1s}
+.act .ic{font-size:1.8rem;line-height:1.1}
+.act b{font-weight:800;font-size:.95rem}
+.act small{font-size:.75rem;color:var(--muted);font-weight:700}
+.act.on{border-color:var(--ac);background:color-mix(in srgb,var(--ac) 26%,var(--card));transform:translateY(-2px)}
+.act:active{transform:translateY(1px)}
+.targets{display:flex;gap:10px;margin:6px 0 14px;overflow-x:auto;padding:4px 2px}
+.tgt{font:inherit;color:var(--ink);background:none;border:0;padding:0;cursor:pointer;display:flex;flex-direction:column;align-items:center;gap:4px;min-width:60px;opacity:.5}
+.tgt .av{width:48px;height:48px}
+.tgt.on{opacity:1}
+.tgt.on .av{box-shadow:0 0 0 3px var(--card),0 0 0 6px var(--pc)}
+.tgt b{font-size:.8rem;font-weight:800}
+/* carta secreta: segure para virar */
+.scard{display:flex;align-items:center;gap:14px}
+.flip{flex:none;width:96px;height:128px;perspective:700px;cursor:pointer;user-select:none;-webkit-user-select:none;-webkit-touch-callout:none;touch-action:none;border:0;padding:0;background:none;font:inherit}
+.flip .in{display:block;position:relative;width:100%;height:100%;transition:transform .45s cubic-bezier(.3,1.4,.5,1);transform-style:preserve-3d}
+.flip.show .in{transform:rotateY(180deg)}
+.flip .face{position:absolute;inset:0;border-radius:16px;backface-visibility:hidden;-webkit-backface-visibility:hidden;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:6px;padding:8px;text-align:center;box-shadow:inset 0 -4px 0 rgba(0,0,0,.15)}
+.flip .front{background:var(--accent);color:#fff;font-family:"Baloo 2",sans-serif;font-size:3rem;font-weight:800;
+  background-image:repeating-linear-gradient(45deg,rgba(255,255,255,.12) 0 10px,transparent 10px 20px)}
+.flip .back{background:var(--card);border:3px solid var(--accent);transform:rotateY(180deg);color:var(--ink)}
+.flip .back .e{font-size:1.6rem}
+.flip .back b{font-family:"Baloo 2",sans-serif;font-size:1rem;line-height:1.1;word-break:break-word}
+/* histórico em conversa */
+.chat{list-style:none;padding:0;margin:0;display:flex;flex-direction:column;gap:10px;max-height:420px;overflow:auto}
+.chat li{display:flex;flex-direction:column;gap:4px}
+.msg{display:flex;align-items:flex-end;gap:6px;max-width:88%}
+.msg .av{width:28px;height:28px;border-radius:50%;font-size:.95rem}
+.msg.r{align-self:flex-end;flex-direction:row-reverse}
+.bub{padding:8px 11px;border-radius:4px 16px 16px 16px;background:color-mix(in srgb,var(--pc) 14%,var(--card));border:1px solid color-mix(in srgb,var(--pc) 30%,transparent);font-size:.93rem}
+.msg.r .bub{border-radius:16px 4px 16px 16px}
+.bub .who{display:block;font-size:.72rem;font-weight:800;color:var(--muted)}
+.bub.ans{font-weight:800;color:#fff;border:0}
+.bub.ans.sim{background:var(--ok)} .bub.ans.nao{background:var(--no)} .bub.ans.naosei{background:var(--maybe)} .bub.ans.wait,.bub.ans.skip{background:var(--muted)}
+.chat li.mid{align-items:center}
+.chat .note2{max-width:92%;text-align:center;font-size:.88rem;padding:7px 12px;border-radius:14px;background:var(--soft)}
+.chat .note2.hint{background:color-mix(in srgb,#a855f7 14%,var(--card));border:1px solid color-mix(in srgb,#a855f7 30%,transparent)}
+.chat .note2.good{background:color-mix(in srgb,var(--ok) 16%,var(--card));border:1px solid color-mix(in srgb,var(--ok) 40%,transparent)}
+.chat .note2.bad{background:color-mix(in srgb,var(--no) 12%,var(--card))}
+.chat .sys{font-size:.8rem;color:var(--muted);text-align:center}
+/* efeitos na tela toda: carimbo e festa */
+#fx{position:fixed;inset:0;z-index:20;pointer-events:none;display:grid;place-items:center}
+.stamp{display:flex;flex-direction:column;align-items:center;gap:6px;max-width:86vw}
+.stamp .st{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:3.4rem;line-height:1;padding:6px 26px 2px;border:6px solid currentColor;border-radius:18px;background:var(--card);
+  box-shadow:0 10px 40px rgba(0,0,0,.25);animation:stamp 1.7s ease forwards}
+.stamp .st.sim{color:var(--ok)} .stamp .st.nao{color:var(--no)} .stamp .st.naosei{color:var(--maybe)} .stamp .st.dica{color:#a855f7} .stamp .st.erro{color:var(--no)}
+.stamp .sub{background:var(--ink);color:var(--bg);font-weight:800;padding:6px 12px;border-radius:12px;text-align:center;font-size:.9rem;animation:fade 1.7s ease forwards}
+@keyframes stamp{0%{transform:scale(2.6) rotate(-16deg);opacity:0}18%{transform:scale(.92) rotate(-8deg);opacity:1}26%{transform:scale(1) rotate(-8deg)}82%{opacity:1}100%{opacity:0;transform:scale(1) rotate(-8deg)}}
+@keyframes fade{0%,12%{opacity:0}22%,82%{opacity:1}100%{opacity:0}}
+.party{position:absolute;inset:0;display:grid;place-items:center;background:rgba(20,14,26,.55);animation:fade 3.2s ease forwards;overflow:hidden}
+.party .box{position:relative;z-index:1;background:var(--card);border-radius:24px;padding:22px 28px;text-align:center;display:flex;flex-direction:column;align-items:center;gap:6px;box-shadow:0 20px 60px rgba(0,0,0,.35);animation:popin .5s cubic-bezier(.3,1.6,.5,1)}
+.party .av{width:72px;height:72px;border-radius:22px;font-size:2.2rem}
+.party h3{margin:4px 0 0;font-size:1.6rem}
+.party .it{font-family:"Baloo 2",sans-serif;font-weight:800;font-size:1.5rem;padding:4px 16px;border-radius:14px;background:color-mix(in srgb,var(--pc) 18%,var(--card));border:2px solid var(--pc)}
+.party .plus{color:var(--ok);font-weight:800;font-size:1.2rem;animation:bob .8s ease-in-out infinite}
+.party .cf{position:absolute;top:-20px;width:10px;height:14px;border-radius:2px;animation:fall linear forwards}
+@keyframes fall{to{transform:translateY(110vh) rotate(720deg)}}
+@keyframes popin{from{transform:scale(.4);opacity:0}to{transform:scale(1);opacity:1}}
+@media (prefers-reduced-motion:reduce){
+  .seat.on .av,.party .plus{animation:none}
+  .stamp .st{animation:fade 1.7s ease forwards}
+  .party .cf{display:none}
+  .flip .in{transition:none}
+}
 @media (max-width:420px){
   .share{flex-direction:column;align-items:stretch}
   .qr{align-self:center}
   h1{font-size:1.9rem}
+  .brand .long{display:none}
+  .stamp .st{font-size:2.8rem}
 }
 </style>
 </head>
@@ -139,6 +228,7 @@ details.rules ul{padding-left:20px;margin:10px 0 0} details.rules li{margin:4px 
 <div class="topbar" id="topbar" hidden></div>
 <main id="app"></main>
 <div id="toast" role="status" aria-live="polite"></div>
+<div id="fx" aria-live="polite"></div>
 
 <script src="https://unpkg.com/peerjs@1.5.4/dist/peerjs.min.js"></script>
 <script src="https://cdn.jsdelivr.net/npm/qrcode-generator@1.4.4/qrcode.min.js"></script>
@@ -439,12 +529,28 @@ function feedback(v){
   for(const e of v.log||[]){
     const p=old.log[e.id]; if(!p&&e.id<=old.maxId) continue;
     const was=p||{};
-    if(e.k==='q'&&e.ans&&e.ans!=='skip'&&!was.ans) aviso(e.ans);
-    if(e.k==='guess'&&(e.ok===true||e.ok===false)&&was.ok!==e.ok) aviso(e.ok?'acerto':'erro');
-    if((e.k==='hint'||e.k==='forced')&&e.text&&!was.text) aviso('dica');
+    if(e.k==='q'&&e.ans&&e.ans!=='skip'&&!was.ans){ aviso(e.ans); fxStamp(e.ans,{sim:'SIM!',nao:'NÃO!',naosei:'NÃO SEI'}[e.ans],'“'+e.text+'”'); }
+    if(e.k==='guess'&&(e.ok===true||e.ok===false)&&was.ok!==e.ok){ aviso(e.ok?'acerto':'erro'); if(e.ok) fxParty(e); else fxStamp('erro','ERROU!','“'+e.text+'” não é o item de '+nameOf(e.to)); }
+    if((e.k==='hint'||e.k==='forced')&&e.text&&!was.text){ aviso('dica'); fxStamp('dica','💡 DICA',e.text); }
   }
   if(m.pend&&m.pend!==old.pend) aviso('pedido');
   else if(m.mine&&!old.mine) aviso('vez');
+}
+/* Efeitos na tela toda (aparecem para todos, mesmo no modo silêncio). */
+let fxTimer=null;
+function fxShow(html,ms){ const f=$('#fx'); if(!f) return; clearTimeout(fxTimer); f.innerHTML=html; fxTimer=setTimeout(()=>{ f.innerHTML=''; },ms); }
+function fxStamp(cls,big,sub){
+  if($('#fx .party')) return;   // não atrapalha a festa de um acerto
+  fxShow(`<div class="stamp"><div class="st ${cls}">${esc(big)}</div>${sub?`<div class="sub">${esc(sub)}</div>`:''}</div>`,1750);
+}
+function fxParty(e){
+  const p=V&&pl(e.from); if(!p) return;
+  const cores=['#ff6b4a','#3b82f6','#1f9d63','#a855f7','#f5b301','#ec4899'];
+  let cf=''; for(let i=0;i<40;i++) cf+=`<i class="cf" style="left:${(Math.random()*100).toFixed(1)}%;background:${cores[i%cores.length]};animation-duration:${(1.8+Math.random()*1.6).toFixed(2)}s;animation-delay:${(Math.random()*.6).toFixed(2)}s;transform:rotate(${Math.floor(Math.random()*360)}deg)"></i>`;
+  fxShow(`<div class="party">${cf}<div class="box" style="--pc:${COLORS[p.color]}">${avatar(p)}
+    <h3>${e.from===V.me?'Você acertou!':esc(p.name)+' acertou!'}</h3>
+    <div class="muted">O item de ${e.to===V.me?'você':esc(nameOf(e.to))} era</div>
+    <div class="it">${esc(e.item||e.text)}</div><div class="plus">+1 ponto ⭐</div></div></div>`,3300);
 }
 function avisosHtml(){
   return `<section class="card"><div class="between"><h2 style="margin:0">Avisos deste celular</h2><button class="btn sm ghost" data-do="avisos">Fechar</button></div>
@@ -714,10 +820,11 @@ function secretCard(me){
   if(!me.alive) return `<section class="card"><div class="eyebrow">Seu item foi descoberto</div>
     <div class="secret"><span class="item">${esc(me.item.n)}</span><span class="tag spec">Espectador Ativo</span></div>
     <p class="note">Você continua jogando: pergunte, use dicas e dê palpites para ganhar mais pontos!</p></section>`;
-  return `<section class="card"><div class="eyebrow">Seu item secreto · ${catLabel(me.cat)}</div>
-    <div class="secret"><span class="item ${ui.peek?'':'blur'}">${esc(me.item.n)}</span>
-    <button class="btn sm" data-do="peek">${ui.peek?'🙈 Esconder':'👀 Ver'}</button></div>
-    <p class="note">Não deixe ninguém espiar a sua tela!</p></section>`;
+  return `<section class="card"><div class="scard">
+    <button class="flip ${holding?'show':''}" id="flip" aria-label="Segure para ver o seu item secreto">
+      <span class="in"><span class="face front">?</span><span class="face back"><span class="e">${catEmoji(me.cat)}</span><b>${esc(me.item.n)}</b></span></span></button>
+    <div><div class="eyebrow">Seu item secreto</div><div style="font-weight:800;margin:2px 0 6px">${catLabel(me.cat)}</div>
+      <p class="note">👆 <b>Segure a carta</b> para ver. Solte e ela vira de volta. Não deixe ninguém espiar!</p></div></div></section>`;
 }
 function renderActions(me){
   const targets=V.players.filter(p=>p.alive&&p.pid!==V.me);
@@ -743,14 +850,15 @@ function renderActions(me){
       <button class="btn primary big" data-do="guess">🎯 Arriscar palpite</button>
       ${me.alive?'<p class="note">Atenção: se errar, você terá que dar uma dica sobre o <b>seu</b> item para todos.</p>':''}</div>`;
   }
-  return `<section class="card answer"><h2>Sua vez! Escolha uma ação</h2>
-    <div class="tabs" role="tablist">
-      <button class="${ui.tab==='ask'?'on':''}" data-tab="ask">❓ Perguntar</button>
-      <button class="${ui.tab==='hint'?'on':''}" data-tab="hint">💡 Dica <small>· restam ${left}</small></button>
-      <button class="${ui.tab==='guess'?'on':''}" data-tab="guess">🎯 Palpite</button>
+  const act=(k,ic,lb,sub,c)=>`<button class="act ${ui.tab===k?'on':''}" style="--ac:${c}" data-tab="${k}" aria-pressed="${ui.tab===k}"><span class="ic">${ic}</span><b>${lb}</b>${sub?`<small>${sub}</small>`:''}</button>`;
+  return `<section class="card answer"><h2>O que você vai fazer?</h2>
+    <div class="acts">
+      ${act('ask','❓','Perguntar','Sim ou não','#1f9d63')}
+      ${act('hint','💡','Dica',left>0?(left===1?'resta 1':'restam '+left):'acabaram','#a855f7')}
+      ${act('guess','🎯','Palpite','valendo ponto','#ff6b4a')}
     </div>
     <div class="eyebrow">Para quem?</div>
-    <div class="chips">${targets.map(p=>`<button class="chip ${p.pid===ui.target?'on':''}" style="--pc:${COLORS[p.color]}" data-target="${esc(p.pid)}">${AVATARS[p.color]} ${esc(p.name)} <small>${catEmoji(p.cat)}</small></button>`).join('')}</div>
+    <div class="targets">${targets.map(p=>`<button class="tgt ${p.pid===ui.target?'on':''}" style="--pc:${COLORS[p.color]}" data-target="${esc(p.pid)}" aria-pressed="${p.pid===ui.target}">${avatar(p)}<b>${esc(p.name)}</b><small class="muted">${catEmoji(p.cat)}</small></button>`).join('')}</div>
     ${body}</section>`;
 }
 function playersHtml(){
@@ -767,24 +875,30 @@ function playersHtml(){
     </article>`).join('')}</div></section>`;
 }
 const ANS={sim:'Sim',nao:'Não',naosei:'Não sei',skip:'Sem resposta'};
+/* Histórico em conversa: quem pergunta fala à esquerda, quem responde à direita, na cor de cada um. */
+function bubble(pid,html,cls,right){
+  const p=pl(pid)||{color:0,pid:pid};
+  return `<div class="msg ${right?'r':''}" style="--pc:${COLORS[p.color]||COLORS[0]}">${p.name!=null?avatar(p):''}<div class="bub ${cls||''}">${html}</div></div>`;
+}
 function logLine(e,inline){
-  const n=pid=>`<b>${esc(nameOf(pid))}</b>`;
+  const n=pid=>`<b>${esc(pid===V.me?'Você':nameOf(pid))}</b>`;
+  const who=(a,b)=>`<span class="who">${esc(a===V.me?'Você':nameOf(a))} → ${esc(b===V.me?'você':nameOf(b))}</span>`;
   switch(e.k){
-    case 'sys':  return `<li class="sys">${esc(e.text)}</li>`;
-    case 'q':    return `<li>❓ ${n(e.from)} → ${n(e.to)}: “${esc(e.text)}” ${e.ans?`<span class="badge ${e.ans}">${ANS[e.ans]}</span>`:'<span class="badge wait">aguardando…</span>'}</li>`;
-    // O texto das dicas fica só no cartão do jogador, para não aparecer repetido.
+    case 'sys':  return `<li class="mid"><span class="sys">${esc(e.text)}</span></li>`;
+    case 'q':    return `<li>${bubble(e.from,who(e.from,e.to)+'❓ '+esc(e.text))}${bubble(e.to,e.ans?ANS[e.ans]:'pensando…','ans '+(e.ans||'wait'),true)}</li>`;
+    // Fora do filtro, o texto da dica fica só no cartão do jogador, para não aparecer repetido.
     case 'hint':
-      if(e.text==null) return `<li>💡 ${n(e.from)} pediu uma dica para ${n(e.to)} <span class="badge wait">aguardando…</span></li>`;
-      if(inline&&e.text) return `<li>💡 ${n(e.to)} deu ${e.auto?'uma dica pronta 🤖':'uma dica ✍️'} para ${n(e.from)}: “${esc(e.text)}”</li>`;
-      return `<li>💡 ${n(e.to)} deu ${e.auto?'uma dica pronta 🤖':'uma dica ✍️'} para ${n(e.from)} (toque em ${n(e.to)} acima para ver).${e.text===''?' Não havia mais dicas.':''}</li>`;
+      if(e.text==null) return `<li>${bubble(e.from,who(e.from,e.to)+'💡 Me dá uma dica?')}${bubble(e.to,'escrevendo…','ans wait',true)}</li>`;
+      return `<li>${bubble(e.from,who(e.from,e.to)+'💡 Me dá uma dica?')}${bubble(e.to,(e.auto?'🤖 ':'✍️ ')+(inline&&e.text?'“'+esc(e.text)+'”':e.text===''?'Não havia mais dicas.':'Dei uma dica! Toque em '+n(e.to)+' acima para ver.'),'',true)}</li>`;
     case 'forced':
-      if(e.text==null) return `<li>⚠️ Dica Forçada: ${n(e.from)} está escrevendo uma dica sobre o próprio item…</li>`;
-      return `<li>⚠️ Dica Forçada: ${n(e.from)} deu ${e.auto?'uma dica pronta 🤖':'uma dica ✍️'} sobre o próprio item${inline&&e.text?`: “${esc(e.text)}”`:'.'}${e.text===''?' Não havia mais dicas.':''}</li>`;
-    case 'guess':
-      if(e.ok===true) return `<li>🎯 ${n(e.from)} acertou! O item de ${n(e.to)} era <b>${esc(e.item)}</b>${e.judged?` (${n(e.to)} confirmou “${esc(e.text)}”)`:''}. +1 ponto</li>`;
-      if(e.ok===false) return `<li>❌ ${n(e.from)} chutou “${esc(e.text)}” para ${n(e.to)} e errou.</li>`;
-      if(e.ok==='skip') return `<li>🎯 ${n(e.from)} chutou “${esc(e.text)}” para ${n(e.to)}, mas ficou sem resposta.</li>`;
-      return `<li>🎯 ${n(e.from)} chutou “${esc(e.text)}” para ${n(e.to)} <span class="badge wait">conferindo…</span></li>`;
+      if(e.text==null) return `<li class="mid"><span class="note2 hint">⚠️ Dica Forçada: ${n(e.from)} está escrevendo uma dica sobre o próprio item…</span></li>`;
+      return `<li class="mid"><span class="note2 hint">⚠️ Dica Forçada: ${n(e.from)} deu uma dica sobre o próprio item${inline&&e.text?`: “${esc(e.text)}”`:e.text===''?', mas não havia mais dicas.':' (toque no nome acima para ver).'}</span></li>`;
+    case 'guess': {
+      const q=bubble(e.from,who(e.from,e.to)+'🎯 É “'+esc(e.text)+'”?');
+      if(e.ok===true) return `<li>${q}${bubble(e.to,'Acertou! ✅'+(e.judged?' (confirmado)':''),'ans sim',true)}<span class="note2 good" style="align-self:center">🎉 ${n(e.from)} descobriu: <b>${esc(e.item)}</b> · +1 ponto</span></li>`;
+      if(e.ok===false) return `<li>${q}${bubble(e.to,'Errou ❌','ans nao',true)}</li>`;
+      if(e.ok==='skip') return `<li>${q}${bubble(e.to,'Sem resposta','ans skip',true)}</li>`;
+      return `<li>${q}${bubble(e.to,'conferindo…','ans wait',true)}</li>`; }
   }
   return '';
 }
@@ -803,7 +917,7 @@ function historyHtml(){
   const p=all?null:pl(f);
   const head=p?`<p class="note" style="margin:0 0 8px">Tudo o que já se sabe sobre o item de <b>${p.pid===V.me?'você':esc(p.name)}</b> (${catLabel(p.cat)}).</p>`:'';
   return `<section class="card"><h2>Histórico</h2>${chips}${head}
-    ${shown.length?`<ul class="log">${shown.map(e=>logLine(e,!all)).join('')}</ul>`:'<p class="muted small">Nada por aqui ainda.</p>'}
+    ${shown.length?`<ul class="chat">${shown.map(e=>logLine(e,!all)).join('')}</ul>`:'<p class="muted small">Nada por aqui ainda.</p>'}
     ${list.length>shown.length?`<button class="btn sm ghost" style="margin-top:8px;width:100%" data-histall="1">Ver tudo (${list.length})</button>`:''}</section>`;
 }
 /* Cartão para quem precisa responder algo: pergunta, pedido de dica, Dica Forçada ou conferir palpite. */
@@ -829,6 +943,27 @@ function pendingCard(pend,me){
       <p class="note">Lembrete: seu item é ${item}.</p>
       <div class="ansrow"><button class="btn yes" data-ans="sim">Sim</button><button class="btn no" data-ans="nao">Não</button><button class="btn maybe" data-ans="naosei">Não sei</button></div></section>`;
 }
+/* Placar fixo no topo. Quem precisa agir agora (quem joga ou quem tem que responder) pulsa.
+   A barra de tempo é só visual: esvazia em 1 minuto e não pula ninguém. */
+const TURN_SECS=60;
+let actKey='', actAt=0;
+function actor(){ return V.pending?V.pending.to:(V.players[V.turn]||{}).pid; }
+function boardHtml(){
+  const who=actor(), p=pl(who); if(!p) return '';
+  const key=V.round+':'+V.turn+':'+(V.pending?V.pending.logId:'');
+  if(key!==actKey){ actKey=key; actAt=Date.now(); }
+  const el=(Date.now()-actAt)/1000;
+  const msg=V.pending
+    ? (who===V.me?'Responda!':esc(p.name)+' está respondendo…')
+    : (who===V.me?'Sua vez!':'Vez de '+esc(p.name));
+  return `<div class="board"><div class="seats">${V.players.map(s=>`
+    <div class="seat ${s.pid===who?'on':''} ${s.alive?'':'out'} ${s.online?'':'off'}" style="--pc:${COLORS[s.color]}">
+      ${avatar(s)}<span class="nm">${s.pid===V.me?'Você':esc(s.name)}</span><span class="pt">⭐ ${s.score}</span></div>`).join('')}</div>
+    <div class="timer" style="--pc:${COLORS[p.color]}"><i style="animation-delay:-${el.toFixed(1)}s"></i></div>
+    <div class="tstat"><span style="color:${COLORS[p.color]}">${msg}${p.online?'':' (offline)'}</span><span id="clock">${clockText()}</span></div></div>`;
+}
+function clockText(){ const s=Math.floor((Date.now()-actAt)/1000); return s>=TURN_SECS?'⏰ '+Math.floor(s/60)+':'+String(s%60).padStart(2,'0'):Math.floor(s/60)+':'+String(s%60).padStart(2,'0'); }
+setInterval(()=>{ const c=$('#clock'); if(c) c.textContent=clockText(); },1000);
 function renderGame(){
   const me=pl(V.me); const cur=V.players[V.turn]; const host=V.hostPid===V.me;
   const myTurn=cur&&cur.pid===V.me; const pend=V.pending;
@@ -843,7 +978,7 @@ function renderGame(){
   } else if(myTurn){
     top=renderActions(me);
   }
-  const bar=cur?`<div class="turnbar" style="--pc:${COLORS[cur.color]}">${avatar(cur)}<span>${myTurn?'Sua vez!':'Vez de '+esc(cur.name)}${cur.online?'':' (offline)'}</span></div>`:'';
+  const bar=boardHtml();
   const tools=host?`<section class="card"><div class="eyebrow">Controles do anfitrião</div><div class="row" style="margin-top:8px">
       <button class="btn sm" data-do="skip">⏭️ Pular a vez de ${esc(cur?cur.name:'')}</button>
       <button class="btn sm ghost" data-do="lobby">Encerrar partida</button></div>
@@ -868,7 +1003,7 @@ function renderTopbar(){
   const tb=$('#topbar');
   if(mode!=='room'||!V){ tb.hidden=true; return; }
   tb.hidden=false;
-  tb.innerHTML=`<div class="brand">❓ Adivinha o que é</div><div class="row">${!isHost&&!linkOk?'<span class="tag off">Reconectando…</span>':''}<span class="tag">Sala ${esc(V.code)}</span><button class="btn ghost sm" data-do="avisos" aria-label="Avisos" title="Avisos">${AVISO_MODOS[avisos.modo].split(' ')[0]}</button><button class="btn ghost sm" data-do="leave">Sair</button></div>`;
+  tb.innerHTML=`<div class="brand">❓ Adivinha<span class="long"> o que é</span></div><div class="row">${!isHost&&!linkOk?'<span class="tag off">Reconectando…</span>':''}<span class="tag" title="Código da sala">${esc(V.code)}</span><button class="btn ghost sm" data-do="avisos" aria-label="Avisos" title="Avisos">${AVISO_MODOS[avisos.modo].split(' ')[0]}</button><button class="btn ghost sm" data-do="leave">Sair</button></div>`;
 }
 function render(){
   const saved={}; let focusKey=null, sel=null;
@@ -990,6 +1125,15 @@ document.addEventListener('click',e=>{
   if(b.dataset.target){ ui.target=b.dataset.target; return render(); }
   if(b.dataset.tab){ ui.tab=b.dataset.tab; return render(); }
 });
+/* Carta secreta: mostra só enquanto o dedo (ou a tecla) estiver segurando. */
+let holding=false;
+function setHold(on){ holding=on; const f=$('#flip'); if(f) f.classList.toggle('show',on); }
+document.addEventListener('pointerdown',e=>{ if(e.target.closest('#flip')){ e.preventDefault(); setHold(true); } });
+['pointerup','pointercancel','blur'].forEach(t=>window.addEventListener(t,()=>{ if(holding) setHold(false); }));
+document.addEventListener('pointerout',e=>{ if(holding&&e.target.closest&&e.target.closest('#flip')&&!(e.relatedTarget&&e.relatedTarget.closest&&e.relatedTarget.closest('#flip'))) setHold(false); });
+document.addEventListener('contextmenu',e=>{ if(e.target.closest('#flip')) e.preventDefault(); });
+document.addEventListener('keydown',e=>{ if((e.key===' '||e.key==='Enter')&&e.target.id==='flip'){ e.preventDefault(); setHold(true); } });
+document.addEventListener('keyup',e=>{ if(e.target.id==='flip') setHold(false); });
 document.addEventListener('change',e=>{
   const el=e.target;
   if(el.dataset.change==='cat') send({a:'cat',cat:el.value});
