@@ -10,6 +10,7 @@ Jogo de dedução para família e amigos, jogado no navegador do celular. Cada j
 - 🎚️ Níveis Fácil e Médio
 - ❓ 800 perguntas prontas, com busca e sugestões que combinam com o item
 - 🔔 Sons e vibração nas respostas, na sua vez, nos acertos e erros (cada um escolhe os seus)
+- 🎉 Placar sempre visível, carta secreta de segurar para ver, carimbo animado nas respostas, confete nos acertos e histórico em balões de conversa
 - 📱 Funciona em celular, tablet e computador, com tema claro e escuro
 
 ---
